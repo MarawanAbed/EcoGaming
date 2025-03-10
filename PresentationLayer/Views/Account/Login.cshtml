@@ -1,0 +1,169 @@
+﻿@model LoginActionRequest
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGaming - Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+        /* ==== Gaming Theme ==== */
+        body {
+            background: linear-gradient(135deg, #121212, #1a1a1a);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-card {
+            background-color: #222;
+            border: 1px solid #00ffcc;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group-addon {
+            background: #00ffcc;
+            color: #121212;
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .form-control {
+            border: 1px solid #00ffcc;
+            background: #333;
+            color: #fff;
+        }
+
+            .form-control::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+        .login-btn {
+            background-color: #00ffcc;
+            color: #121212;
+            font-weight: bold;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .login-btn:hover {
+                background-color: #009999;
+                box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+            }
+
+        .forgot-password {
+            color: #00ffcc;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .signUp {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+            .social-icons a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background: #00ffcc;
+                color: #121212;
+                border-radius: 50%;
+                line-height: 40px;
+                margin: 0 10px;
+                font-size: 1.2rem;
+                transition: all 0.3s ease-in-out;
+            }
+
+                .social-icons a:hover {
+                    background: #009999;
+                    color: #fff;
+                    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+                }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <img src="~/Images/Ecommerce.png" alt="EcoGaming Logo" class="mb-4" width="120">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <h2 class="login-title">Login</h2>
+
+            <p class="text-light">Sign in to your account</p>
+            <form asp-action="login" asp-controller="Account">
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="form-control" placeholder="Email" asp-for="Email">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Password" >
+
+                </div>
+                <div class="form-check text-start mb-3">
+                    <input class="form-check-input" type="checkbox" asp-for="RememberMe">
+                    <label class="form-check-label" asp-for="RememberMe">
+                        Remember Me
+                    </label>
+                </div>
+                <button type="submit" class="btn login-btn w-100 py-2">Login</button>
+
+                <a asp-action="ForgetPassword" asp-controller="Account" class="forgot-password">Forgot password?</a>
+                <p class="mt-3 text-light">Don't have an account? <a asp-action="register" asp-controller="Account" class="signUp">Sign Up</a></p>
+            </form>
+
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+﻿
+@model RegisterActionRequest
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGaming - Register</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #121212, #1a1a1a);
+            color: #ffffff;
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .auth-card {
+            background-color: #222;
+            border: 1px solid #00ffcc;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .auth-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group-addon {
+            background: #00ffcc;
+            color: #121212;
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .form-control {
+            border: 1px solid #00ffcc;
+            background: #333;
+            color: #fff;
+        }
+
+            .form-control::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+        .auth-btn {
+            background-color: #00ffcc;
+            color: #121212;
+            font-weight: bold;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .auth-btn:hover {
+                background-color: #009999;
+                box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+            }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+            .social-icons a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background: #00ffcc;
+                color: #121212;
+                border-radius: 50%;
+                line-height: 40px;
+                margin: 0 10px;
+                font-size: 1.2rem;
+                transition: all 0.3s ease-in-out;
+            }
+
+                .social-icons a:hover {
+                    background: #009999;
+                    color: #fff;
+                    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+                }
+
+        .forgot-password {
+            color: #00ffcc;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        /* Button Group Styling */
+        .btn-group .btn-check:checked + .btn-outline-custom {
+            background-color: #00ffcc;
+            color: #121212;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+            border: 1px solid #00ffcc;
+        }
+
+        .btn-outline-custom {
+            color: #00ffcc;
+            background-color: #333;
+            border: 1px solid #00ffcc;
+            padding: 10px 20px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .btn-outline-custom:hover {
+                background-color: #009999;
+                box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+                color: #121212;
+            }
+
+        /* Focused State */
+        .btn-check:focus + .btn-outline-custom {
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+
+        /* Validation Error Styling */
+        .text-danger {
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Placeholder Styling */
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <img src="~/Images/Ecommerce.png" alt="EcoGaming Logo" class="mb-4" width="120">
+
+            <h2 class="auth-title">Sign Up</h2>
+            <p class="text-light">Create a new account</p>
+
+            <form asp-action="Register" asp-controller="Account">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <!-- Role Selection (Styled Radio Buttons) -->
+                <div class="input-group role-buttons">
+                    <div class="btn-group w-100" role="group">
+                        @foreach (var role in Model.Roles)
+                        {
+                            <input type="radio" class="btn-check" asp-for="Role" value="@role.Value" id="btn-@role.Value" autocomplete="off">
+                            <label class="btn btn-outline-custom" for="btn-@role.Value">@role.Text</label>
+                        }
+                    </div>
+                </div>
+                <!-- Username -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" asp-for="UserName">
+                </div>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+
+                <!-- Email -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="Email" asp-for="Email">
+                </div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+
+
+                <!-- Password -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+                <!-- Confirm Password -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Confirm Password" asp-for="ConfirmPassword">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn auth-btn w-100 py-2">Sign Up</button>
+
+                <p class="mt-3">
+                    Already have an account?
+                    <a asp-action="login" asp-controller="Account" class="forgot-password">Login</a>
+                </p>
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

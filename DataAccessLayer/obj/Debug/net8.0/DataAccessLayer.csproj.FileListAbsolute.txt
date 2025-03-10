@@ -1,0 +1,14 @@
+A:\EcoGaming\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+A:\EcoGaming\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.runtimeconfig.json
+A:\EcoGaming\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+A:\EcoGaming\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.genruntimeconfig.cache
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll

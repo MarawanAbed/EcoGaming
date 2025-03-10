@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>EcoGaming</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/PresentationLayer.styles.css" asp-append-version="true" />
+	<style>
+		/* Custom styles for gaming theme */
+		.navbar {
+			background-color: #121212 !important;
+			border-bottom: 3px solid #00ffcc;
+		}
+
+		body {
+			background-color: #121212 !important; /* Dark background */
+			color: #ffffff !important; /* Light text color */
+		}
+
+
+
+		.auth-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.auth-card {
+			background-color: #222;
+			border: 1px solid #00ffcc;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.3);
+			width: 100%;
+			max-width: 400px;
+			text-align: center;
+		}
+
+		.auth-title {
+			font-size: 1.8rem;
+			font-weight: bold;
+			color: #00ffcc;
+		}
+
+		.input-group {
+			margin-bottom: 15px;
+		}
+
+		.input-group-addon {
+			background: #00ffcc;
+			color: #121212;
+			padding: 10px;
+			border-radius: 5px 0 0 5px;
+		}
+
+		.form-control {
+			border: 1px solid #00ffcc;
+			background: #333;
+			color: #fff;
+		}
+
+		.auth-btn {
+			background-color: #00ffcc;
+			color: #121212;
+			font-weight: bold;
+			border: none;
+			transition: all 0.3s ease-in-out;
+		}
+
+			.auth-btn:hover {
+				background-color: #009999;
+				box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+			}
+
+		.card {
+			background-color: #222 !important; /* Darker cards */
+			color: white !important;
+			border: 1px solid #00ffcc;
+		}
+
+		.navbar-brand {
+			color: #00ffcc !important;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+
+		.navbar-nav .nav-link {
+			color: #fff !important;
+			font-size: 1.1rem;
+		}
+
+			.navbar-nav .nav-link:hover {
+				color: #00ffcc !important;
+			}
+
+		.search-bar {
+			width: 300px;
+		}
+
+		.btn-search {
+			background-color: #00ffcc;
+			color: #121212;
+		}
+
+		.login-register-links {
+			display: none;
+			position: absolute;
+			background-color: #121212;
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		.nav-item:hover .login-register-links {
+			display: block;
+		}
+
+		.btn-search:hover {
+			background-color: #009999;
+		}
+
+		.card {
+			transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+			.card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.3);
+			}
+
+		.card-img-top {
+			width: 100%;
+			height: 250px; /* Ensures consistent size */
+			object-fit: cover;
+			border-radius: 10px;
+		}
+
+		.product-btn {
+			background-color: transparent;
+			border: 2px solid #00ffcc;
+			color: #00ffcc;
+			transition: all 0.3s ease-in-out;
+		}
+
+			.product-btn:hover {
+				background-color: #00ffcc;
+				color: #121212;
+			}
+
+		.card-body {
+			padding-top: 20px; /* Adds more space above the content */
+			padding-bottom: 20px; /* Adds space below */
+		}
+
+		.card-title {
+			margin-bottom: 15px; /* Adds spacing below the title */
+		}
+		/* ==== Login & Register Buttons Styling ==== */
+		.login-btn, .register-btn {
+			padding: 8px 20px;
+			font-weight: bold;
+			border-radius: 5px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.login-btn {
+			color: #00ffcc !important;
+			border: 2px solid #00ffcc;
+		}
+
+			.login-btn:hover {
+				background-color: #00ffcc;
+				color: #121212 !important;
+				box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+			}
+
+		.register-btn {
+			background-color: #00ffcc;
+			color: #121212 !important;
+			border: 2px solid #00ffcc;
+		}
+
+			.register-btn:hover {
+				background-color: transparent;
+				color: #00ffcc !important;
+				box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+			}
+
+		.divider {
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(to right, transparent, #00ffcc, transparent);
+			margin: 50px 0;
+			border-radius: 2px;
+		}
+		/* ==== RenderBody Section Styling ==== */
+		.main-content {
+			background: linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Gradient for depth */
+			padding: 30px;
+			border-radius: 15px;
+			margin-top: 30px;
+			box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.2); /* Glowing effect */
+			min-height: 80vh; /* Ensure enough height */
+		}
+		/* Dropdown Styling */
+		.dropdown-menu {
+			background-color: #222; /* Dark dropdown background */
+			border: 1px solid #00ffcc; /* Neon border */
+		}
+
+		.dropdown-item {
+			color: #fff !important;
+			transition: background 0.3s ease-in-out;
+		}
+
+			.dropdown-item:hover {
+				background-color: #00ffcc !important;
+				color: #121212 !important;
+			}
+
+		.form-check-input {
+			background-color: #333;
+			border: 1px solid #00ffcc;
+		}
+
+			.form-check-input:checked {
+				background-color: #00ffcc;
+				border-color: #00ffcc;
+			}
+
+		.form-check-label {
+			color: #ffffff;
+		}
+
+		.form-check-input:focus {
+			box-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container-fluid">
+				<!-- Logo -->
+				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EcoGaming</a>
+
+				<!-- Toggler button -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<!-- Navigation Menu -->
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+						</li>
+						@if (User.IsInRole("Admin"))
+						{
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="managementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Management
+								</a>
+								<ul class="dropdown-menu bg-dark border border-secondary" aria-labelledby="managementDropdown">
+									<li><a class="dropdown-item text-light" asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+									<li><a class="dropdown-item text-light" asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
+									<li><a class="dropdown-item text-light" asp-area="" asp-controller="Users" asp-action="Index">Users</a></li>
+									<li><a class="dropdown-item text-light" asp-area="" asp-controller="Order" asp-action="Index">Orders</a></li>
+								</ul>
+							</li>
+						}
+						@if (User.IsInRole("Buyer"))
+						{
+							<li class="nav-item">
+								<a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
+							</li>
+						}
+						<li class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
+						</li>
+					</ul>
+
+					<!-- Login/Register Buttons -->
+					<div class="d-flex">
+						@if (User.Identity.IsAuthenticated)
+						{
+							<!-- Dropdown for authenticated users -->
+							<div class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle login-btn me-2" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									@User.Identity.Name
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end bg-dark border border-secondary" aria-labelledby="userDropdown">
+									<li>
+										<form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+											<button type="submit" class="dropdown-item text-light">Logout</button>
+										</form>
+									</li>
+								</ul>
+							</div>
+						}
+						else
+						{
+							<!-- Dropdown for unauthenticated users -->
+							<div class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle login-btn me-2" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Account
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end bg-dark border border-secondary" aria-labelledby="authDropdown">
+									<li>
+										<a class="dropdown-item text-light" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+									</li>
+									<li>
+										<a class="dropdown-item text-light" asp-area="" asp-controller="Register" asp-action="Index">Register</a>
+									</li>
+								</ul>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+	<div class="container main-content">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

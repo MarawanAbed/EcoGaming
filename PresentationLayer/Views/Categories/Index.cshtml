@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Manage Categories";
+}
+
+<div class="container mt-4">
+    <h2 class="text-light text-center mb-4">Manage Categories</h2>
+    <table id="categoriesTable" class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in GetDemoCategories())
+            {
+                <tr>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#categoriesTable').DataTable();
+    });
+</script>
+
+@functions {
+    public class Category
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public List<Category> GetDemoCategories()
+    {
+        return new List<Category>
+        {
+            new Category { Id = 1, Name = "PC Games" },
+            new Category { Id = 2, Name = "Console Games" },
+            new Category { Id = 3, Name = "Accessories" }
+        };
+    }
+}

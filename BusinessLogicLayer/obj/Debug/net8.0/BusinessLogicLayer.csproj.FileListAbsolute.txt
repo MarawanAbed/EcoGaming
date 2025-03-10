@@ -1,0 +1,15 @@
+A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\BusinessLogicLayer.deps.json
+A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\BusinessLogicLayer.dll
+A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\BusinessLogicLayer.pdb
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.AssemblyInfo.cs
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.dll
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\refint\BusinessLogicLayer.dll
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.pdb
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\ref\BusinessLogicLayer.dll
+A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.dll
+A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\Business.450209FB.Up2Date

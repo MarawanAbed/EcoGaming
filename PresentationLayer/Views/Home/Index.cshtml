@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+
+    <!-- Categories Section -->
+    <section class="mb-5">
+        <h2 class="text-light text-center mb-4">Categories</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/game.jpeg" class="card-img-top rounded img-fluid" alt="PC Games">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light">PC Games</h5>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" asp-action="index" asp-controller="PcGames">
+                            Browse
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/game.jpeg" class="card-img-top rounded img-fluid" alt="Console Games">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light">Console Games</h5>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" asp-action="index" asp-controller="ConsoleGamesItems">
+                            Browse
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/game.jpeg" class="card-img-top rounded img-fluid" alt="Accessories">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light">Accessories</h5>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" asp-action="index" asp-controller="AccessoriesItems">
+                            Browse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Popular Games Section -->
+    <section class="mb-5">
+        <h2 class="text-light text-center mb-4">Popular Games</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/game.jpeg" class="card-img-top rounded img-fluid" alt="Game 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light mb-3">Game 1</h5>
+                        <p class="card-text text-light-50">An immersive RPG experience with stunning visuals.</p>
+                        <p class="text-warning mb-2">by <b>Developer A</b></p>
+                        <p class="mb-1"><span class="text-muted text-decoration-line-through">$49.99</span></p>
+                        <p class="fw-bold text-success fs-5">$39.99</p>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" href="#">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/game.jpeg" class="card-img-top rounded img-fluid" alt="Game 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light mb-3">Game 2</h5>
+                        <p class="card-text text-light-50">Fast-paced shooter action with thrilling combat.</p>
+                        <p class="text-warning mb-2">by <b>Developer B</b></p>
+                        <p class="mb-1"><span class="text-muted text-decoration-line-through">$59.99</span></p>
+                        <p class="fw-bold text-success fs-5">$49.99</p>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" href="#">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Popular Accessories Section -->
+    <section class="mb-5">
+        <h2 class="text-light text-center mb-4">Popular Accessories</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/game.jpeg" class="card-img-top rounded img-fluid" alt="Accessory 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light mb-3">Accessory 1</h5>
+                        <p class="card-text text-light-50">Enhance your gaming setup with high-quality accessories.</p>
+                        <p class="text-warning mb-2">by <b>Brand A</b></p>
+                        <p class="mb-1"><span class="text-muted text-decoration-line-through">$79.99</span></p>
+                        <p class="fw-bold text-success fs-5">$69.99</p>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" href="#">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
