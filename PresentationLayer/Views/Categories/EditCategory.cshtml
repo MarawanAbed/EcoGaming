@@ -20,25 +20,29 @@
             <!-- Current Image Section -->
             @if (!string.IsNullOrEmpty(Model.ExistingImagePath))
             {
-                <div class="current-image-section mb-4">
-                    <label class="form-label text-light">Current Image:</label>
-                    <div class="image-wrapper">
-                        <img src="~/Images/@Model.ExistingImagePath" alt="Current Image" class="img-thumbnail rounded shadow" />
+                <div class="current-image-section mb-4 text-center">
+                    <label class="form-label text-light fw-bold">Current Image:</label>
+                    <div class="position-relative d-inline-block">
+                        <img src="~/Images/@Model.ExistingImagePath" alt="Current Image" class="img-thumbnail rounded shadow current-img-preview" />
+                        <p class="text-secondary mt-2">(@Model.ExistingImagePath)</p>
                     </div>
                 </div>
             }
 
             <!-- Upload New Image -->
-            <div class="input-group mb-4">
-                <span class="input-group-addon bg-dark text-light border-secondary"><i class="fa fa-image"></i></span>
-                <input type="file" asp-for="Image" id="imageInput" class="form-control bg-dark text-light border-secondary rounded" accept="image/*" onchange="previewImage(event)" />
+            <div class="mb-4">
+                <label class="form-label text-light fw-bold">Upload New Image:</label>
+                <div class="input-group">
+                    <input type="file" asp-for="Image" id="imageInput" class="form-control bg-dark text-light border-secondary rounded custom-file-upload" accept="image/*" onchange="previewImage(event)" />
+                </div>
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
 
-            <!-- New Image Preview with Close Icon -->
+            <!-- New Image Preview with Remove Option -->
             <div class="mb-4 text-center image-preview-container" id="imagePreviewContainer" style="display: none;">
                 <div class="position-relative d-inline-block">
-                    <img id="imagePreview" src="#" alt="New Image Preview" class="img-thumbnail rounded shadow" style="max-width: 250px;" />
-                    <span class="close-icon" onclick="removeImage()">&times;</span>
+                    <img id="imagePreview" src="#" alt="New Image Preview" class="img-thumbnail rounded shadow new-img-preview" />
+                    <span class="close-icon" onclick="removeImage()">✖</span>
                 </div>
             </div>
 
@@ -56,7 +60,7 @@
 </div>
 
 <script>
-    // Preview image function
+    // Preview the new image when selected
     function previewImage(event) {
         var reader = new FileReader();
         reader.onload = function () {
@@ -67,9 +71,14 @@
         reader.readAsDataURL(event.target.files[0]);
     }
 
-    // Remove image preview
+    // Remove the new image preview and clear input
     function removeImage() {
-        document.getElementById('imageInput').value = ''; // Clear file input
-        document.getElementById('imagePreviewContainer').style.display = 'none'; // Hide preview
+        document.getElementById('imageInput').value = '';
+        document.getElementById('imagePreviewContainer').style.display = 'none';
+    }
+
+    // Clear file input
+    function clearFileInput() {
+        document.getElementById('imageInput').value = '';
     }
 </script>
