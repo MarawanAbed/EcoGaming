@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
-namespace PresentationLayer.ActionRequests
+namespace PresentationLayer.ActionRequests.Account
 {
     public class RegisterActionRequest
     {

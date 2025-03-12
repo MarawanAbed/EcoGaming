@@ -20,3 +20,440 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Cancel and Add Product Buttons */
+.btn-cancel, .btn-add-product {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+}
+
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.btn-cancel:hover {
+    background-color: #00ffcc;
+    color: #121212;
+}
+/* Close Icon Styling */
+.close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+    .close-icon:hover {
+        background-color: #e60000;
+    }
+
+/* Preview Image Styling */
+.image-preview-container img {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .image-preview-container img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.5);
+    }
+
+/* Current Image Section */
+.current-image-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    border: 2px solid #00ffcc;
+}
+
+    .current-image-section .image-wrapper img {
+        max-width: 250px;
+        border: 2px solid #00ffcc;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+}
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+    }
+
+.btn-cancel, .btn-add-product {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+}
+
+    .btn-cancel:hover {
+        background-color: #00ffcc;
+        color: #121212;
+    }
+
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+}
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+    }
+
+/* Image Preview */
+#imagePreview {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Input Group Styling */
+.input-group-addon {
+    background-color: #00ffcc;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #00ffcc;
+    color: #fff;
+}
+
+    .form-control:focus {
+        border-color: #00ffcc;
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+    }
+
+/* Image Preview */
+#imagePreview {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Custom styles for gaming theme */
+.navbar {
+    background-color: #121212 !important;
+    border-bottom: 3px solid #00ffcc;
+}
+
+body {
+    background-color: #121212 !important; /* Dark background */
+    color: #ffffff !important; /* Light text color */
+}
+
+
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-card {
+    background-color: #222;
+    border: 1px solid #00ffcc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group-addon {
+    background: #00ffcc;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+    border: 1px solid #00ffcc;
+    background: #333;
+    color: #fff;
+}
+
+.auth-btn {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+    .auth-btn:hover {
+        background-color: #009999;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.card {
+    background-color: #222 !important; /* Darker cards */
+    color: white !important;
+    border: 1px solid #00ffcc;
+}
+
+.navbar-brand {
+    color: #00ffcc !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #00ffcc !important;
+    }
+
+.search-bar {
+    width: 300px;
+}
+
+.btn-search {
+    background-color: #00ffcc;
+    color: #121212;
+}
+/* Add Product Button */
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    border: 2px solid #00ffcc;
+    padding: 8px 20px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+    .btn-add-product i {
+        margin-right: 5px;
+    }
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.login-register-links {
+    display: none;
+    position: absolute;
+    background-color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nav-item:hover .login-register-links {
+    display: block;
+}
+
+.btn-search:hover {
+    background-color: #009999;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.3);
+    }
+
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Ensures consistent size */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-btn {
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    transition: all 0.3s ease-in-out;
+}
+
+    .product-btn:hover {
+        background-color: #00ffcc;
+        color: #121212;
+    }
+
+.card-body {
+    padding-top: 20px; /* Adds more space above the content */
+    padding-bottom: 20px; /* Adds space below */
+}
+
+.card-title {
+    margin-bottom: 15px; /* Adds spacing below the title */
+}
+/* ==== Login & Register Buttons Styling ==== */
+.login-btn, .register-btn {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn {
+    color: #00ffcc !important;
+    border: 2px solid #00ffcc;
+}
+
+    .login-btn:hover {
+        background-color: #00ffcc;
+        color: #121212 !important;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.register-btn {
+    background-color: #00ffcc;
+    color: #121212 !important;
+    border: 2px solid #00ffcc;
+}
+
+    .register-btn:hover {
+        background-color: transparent;
+        color: #00ffcc !important;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.divider {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #00ffcc, transparent);
+    margin: 50px 0;
+    border-radius: 2px;
+}
+/* ==== RenderBody Section Styling ==== */
+.main-content {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Gradient for depth */
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.2); /* Glowing effect */
+    min-height: 80vh; /* Ensure enough height */
+}
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: #222; /* Dark dropdown background */
+    border: 1px solid #00ffcc; /* Neon border */
+}
+
+.dropdown-item {
+    color: #fff !important;
+    transition: background 0.3s ease-in-out;
+}
+
+    .dropdown-item:hover {
+        background-color: #00ffcc !important;
+        color: #121212 !important;
+    }
+
+.form-check-input {
+    background-color: #333;
+    border: 1px solid #00ffcc;
+}
+
+    .form-check-input:checked {
+        background-color: #00ffcc;
+        border-color: #00ffcc;
+    }
+
+.form-check-label {
+    color: #ffffff;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+/* Close Icon for Removing New Image */
+.close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+    .close-icon:hover {
+        background-color: #e60000;
+    }
+
+/* Current and New Image Styling */
+.img-thumbnail {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .img-thumbnail:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.5);
+    }
+
+/* Image Preview Container */
+.image-preview-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}

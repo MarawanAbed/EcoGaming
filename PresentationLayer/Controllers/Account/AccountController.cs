@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MimeKit;
-using PresentationLayer.ActionRequests;
+using PresentationLayer.ActionRequests.Account;
 using System.Net;
 
 namespace PresentationLayer.Controllers.Account

@@ -1,0 +1,75 @@
+﻿@model EditCategoriesActionRequest
+
+<div class="container mt-5">
+    <div class="card bg-dark text-light shadow-lg p-4 rounded">
+        <h2 class="text-center mb-4">Edit Category - @Model.CategoryName</h2>
+
+        <form asp-action="EditCategory" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ExistingImagePath" />
+            <input type="hidden" asp-for="CategoryId" />
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <!-- Category Name -->
+            <div class="form-floating mb-4">
+                <input type="text" asp-for="CategoryName" class="form-control bg-dark text-light border-secondary rounded" placeholder="Category Name" required />
+                <label asp-for="CategoryName" class="text-light">Category Name</label>
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+
+            <!-- Current Image Section -->
+            @if (!string.IsNullOrEmpty(Model.ExistingImagePath))
+            {
+                <div class="current-image-section mb-4">
+                    <label class="form-label text-light">Current Image:</label>
+                    <div class="image-wrapper">
+                        <img src="~/Images/@Model.ExistingImagePath" alt="Current Image" class="img-thumbnail rounded shadow" />
+                    </div>
+                </div>
+            }
+
+            <!-- Upload New Image -->
+            <div class="input-group mb-4">
+                <span class="input-group-addon bg-dark text-light border-secondary"><i class="fa fa-image"></i></span>
+                <input type="file" asp-for="Image" id="imageInput" class="form-control bg-dark text-light border-secondary rounded" accept="image/*" onchange="previewImage(event)" />
+            </div>
+
+            <!-- New Image Preview with Close Icon -->
+            <div class="mb-4 text-center image-preview-container" id="imagePreviewContainer" style="display: none;">
+                <div class="position-relative d-inline-block">
+                    <img id="imagePreview" src="#" alt="New Image Preview" class="img-thumbnail rounded shadow" style="max-width: 250px;" />
+                    <span class="close-icon" onclick="removeImage()">&times;</span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" asp-controller="Categories" class="btn btn-outline-info px-4">
+                    <i class="fa fa-arrow-left"></i> Back
+                </a>
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="fa fa-save"></i> Update Category
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Preview image function
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('imagePreview');
+            output.src = reader.result;
+            document.getElementById('imagePreviewContainer').style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Remove image preview
+    function removeImage() {
+        document.getElementById('imageInput').value = ''; // Clear file input
+        document.getElementById('imagePreviewContainer').style.display = 'none'; // Hide preview
+    }
+</script>

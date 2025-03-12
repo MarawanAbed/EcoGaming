@@ -61,6 +61,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.10.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             }
           },
           "imports": [

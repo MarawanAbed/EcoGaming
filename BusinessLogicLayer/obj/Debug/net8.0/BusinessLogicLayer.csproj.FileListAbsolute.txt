@@ -13,3 +13,4 @@ A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.dll
 A:\EcoGaming\BusinessLogicLayer\bin\Debug\net8.0\DataAccessLayer.pdb
 A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.csproj.AssemblyReference.cache
 A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\Business.450209FB.Up2Date
+A:\EcoGaming\BusinessLogicLayer\obj\Debug\net8.0\BusinessLogicLayer.sourcelink.json

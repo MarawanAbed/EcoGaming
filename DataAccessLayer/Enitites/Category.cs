@@ -13,7 +13,8 @@ namespace DataAccessLayer.Enitites
         [Required(ErrorMessage = "Category Name is required.")]
         [StringLength(50, ErrorMessage = "Category Name cannot exceed 50 characters.")]
         public string Name { get; set; }
-
+        [Url(ErrorMessage = "Invalid URL format.")]
+        public string ImageUrl { get; set; }
         public ICollection<Product> Products { get; set; }
     }
 }

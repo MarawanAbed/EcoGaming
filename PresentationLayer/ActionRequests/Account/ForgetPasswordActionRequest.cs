@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PresentationLayer.ActionRequests
+namespace PresentationLayer.ActionRequests.Account
 {
     public class ForgetPasswordActionRequest
     {

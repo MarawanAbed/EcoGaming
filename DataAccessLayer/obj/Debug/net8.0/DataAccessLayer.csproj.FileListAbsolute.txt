@@ -12,3 +12,4 @@ A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
 A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
 A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.genruntimeconfig.cache
 A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
+A:\EcoGaming\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.sourcelink.json

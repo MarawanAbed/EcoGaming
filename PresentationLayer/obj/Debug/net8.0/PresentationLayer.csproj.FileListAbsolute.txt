@@ -185,3 +185,4 @@ A:\EcoGaming\PresentationLayer\bin\Debug\net8.0\DataAccessLayer.dll
 A:\EcoGaming\PresentationLayer\bin\Debug\net8.0\BusinessLogicLayer.pdb
 A:\EcoGaming\PresentationLayer\bin\Debug\net8.0\DataAccessLayer.pdb
 A:\EcoGaming\PresentationLayer\obj\Debug\net8.0\PresentationLayer.csproj.AssemblyReference.cache
+A:\EcoGaming\PresentationLayer\obj\Debug\net8.0\PresentationLayer.sourcelink.json

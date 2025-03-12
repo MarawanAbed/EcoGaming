@@ -7,10 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Abstraction\" />
-    <Folder Include="Services\Implementation\" />
 	  <PackageReference Include="AutoMapper" Version="14.0.0" />
 	  <PackageReference Include="MailKit" Version="4.10.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,38 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@{
+﻿@{
     ViewData["Title"] = "Manage Products";
 }
 
+@model List<GetAllProductsVm>
+
 <div class="container mt-4">
     <h2 class="text-light text-center mb-4">Manage Products</h2>
+
+    <!-- Add Product Button -->
+    <div class="mb-3 text-end">
+        <a asp-action="AddProducts" asp-controller="Products" class="btn btn-add-product">
+            <i class="fa fa-plus"></i> Add Product
+        </a>
+    </div>
+
     <table id="productsTable" class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Image</th>
                 <th>Name</th>
+				<th>Description </th>
                 <th>Price</th>
+                <th>Stock</th>
                 <th>Category</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var product in GetDemoProducts())
+            @if (Model != null && Model.Any())
+            {
+                foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.ProductId</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(product.ImageUrl))
+                            {
+                                <img src="@product.ImageUrl" width="50" class="rounded">
+                            }
+                            else
+                            {
+                                <span>No Image</span>
+                            }
+                        </td>
+                        <td>@product.Name</td>
+						<td>@product.Description</td>
+                        <td>$@product.Price</td>
+                        <td>@product.Stock</td>
+                        <td>@product.CategoryName</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@product.ProductId" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
             {
                 <tr>
-                    <td>@product.Id</td>
-                    <td><img src="@product.ImageUrl" width="50" class="rounded"></td>
-                    <td>@product.Name</td>
-                    <td>$@product.Price</td>
-                    <td>@product.Category</td>
-                    <td>
-                        <button class="btn btn-sm btn-warning">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
+                    <td colspan="10" class="text-center text-light">No products found.</td>
                 </tr>
             }
         </tbody>
@@ -45,22 +72,3 @@
     });
 </script>
 
-@functions {
-    public class Product
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public string Category { get; set; }
-        public string ImageUrl { get; set; }
-    }
-
-    public List<Product> GetDemoProducts()
-    {
-        return new List<Product>
-        {
-            new Product { Id = 1, Name = "Cyberpunk 2077", Price = 39.99, Category = "PC Games", ImageUrl = "/Images/game.jpeg" },
-            new Product { Id = 2, Name = "God of War", Price = 49.99, Category = "Console Games", ImageUrl = "/Images/game.jpeg" }
-        };
-    }
-}
