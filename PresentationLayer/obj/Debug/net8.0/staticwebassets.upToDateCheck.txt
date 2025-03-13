@@ -1,8 +1,8 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\1deffea3-8ee9-4927-813e-3b23f4b14a2e_download.jpeg
 wwwroot\Images\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg
 wwwroot\Images\bca53c77-66c5-4c4c-b447-0dbc3803a26b_top25modernpcgames-blogroll-1663951042311.jpg
-wwwroot\Images\c06601cb-217b-4f2b-8cf2-a7e5a4a139aa_top25modernpcgames-blogroll-1663951042311.jpg
 wwwroot\Images\cb74b79b-46eb-4aff-9607-354a05efa3e7_download.jpeg
 wwwroot\Images\Ecommerce.png
 wwwroot\Images\game.jpeg
