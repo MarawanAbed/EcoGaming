@@ -20,7 +20,10 @@ namespace BusinessLogicLayer.Mapper
 
             //Product Entity to ProductDto
             CreateMap<CategoryDto, Category>();
+            CreateMap<ProductDto, Product>();
             CreateMap<Product, ProductDto>();
+
+            CreateMap<Product, GetAllProductsDto>();
         }
     }
 }

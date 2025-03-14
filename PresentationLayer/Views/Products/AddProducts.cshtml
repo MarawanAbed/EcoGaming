@@ -3,7 +3,7 @@
 <div class="container mt-5">
     <h2 class="text-light text-center mb-4">Add New Product</h2>
 
-    <form asp-action="AddProduct" method="post" enctype="multipart/form-data">
+    <form asp-controller="Products" asp-action="AddProducts" enctype="multipart/form-data">
         <div class="row justify-content-center">
             <div class="col-md-6">
 
@@ -38,7 +38,7 @@
                 <!-- Category Dropdown -->
                 <div class="input-group mb-3">
                     <span class="input-group-addon"><i class="fa fa-list"></i></span>
-                    <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control" required>
+                    <select id="CategoryId" name="CategoryId" class="form-control" required>
                         <option value="">-- Select Category --</option>
                     </select>
                 </div>
@@ -71,6 +71,7 @@
     </form>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     // Preview image function
     function previewImage(event) {
@@ -82,4 +83,25 @@
         };
         reader.readAsDataURL(event.target.files[0]);
     }
+
+        $(document).ready(function () {
+        $.ajax({
+            url: '/Categories/GetCategories', // 🔹 API call to fetch categories
+            type: 'GET',
+            success: function (data) {
+                var categoryDropdown = $('#CategoryId');
+                categoryDropdown.empty().append('<option value="">-- Select Category --</option>');
+
+                $.each(data, function (index, category) {
+                    categoryDropdown.append($('<option>', {
+                        value: category.categoryId,
+                        text: category.name
+                    }));
+                });
+            },
+            error: function () {
+                $('#categoryError').text('Failed to load categories.');
+            }
+        });
+    });
 </script>

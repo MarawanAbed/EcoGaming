@@ -2,9 +2,9 @@
 <div class="container mt-5">
     <h2 class="text-light text-center mb-4">Edit Product - @Model.Name</h2>
 
-    <form asp-action="EditProduct" method="post" enctype="multipart/form-data">
-        <input type="hidden" asp-for="ExistingImagePath" /> <!-- Add this hidden field -->
-        <input type="hidden" asp-for="CategoryId" />
+    <form asp-action="EditProduct" asp-controller="products" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="ExistingImagePath" />
+        <input type="hidden" asp-for="ProductId" />
 
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -30,10 +30,12 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-addon"><i class="fa fa-list"></i></span>
-                    <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control" required>
+                    <select id="CategoryId" name="CategoryId" class="form-control" required>
                         <option value="">-- Select Category --</option>
                     </select>
                 </div>
+                <input type="hidden" id="SelectedCategoryId" value="@Model.CategoryId" />
+
                 <div class="input-group mb-3">
                     <span class="input-group-addon"><i class="fa fa-image"></i></span>
                     <input type="file" asp-for="Image" class="form-control" accept="image/*" onchange="previewImage(event)" />
@@ -58,6 +60,7 @@
         </div>
     </form>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
     function previewImage(event) {
@@ -69,4 +72,25 @@
         };
         reader.readAsDataURL(event.target.files[0]);
     }
+        $(document).ready(function () {
+        var selectedCategoryId = $('#SelectedCategoryId').val(); // Get the selected category ID
+
+        $.ajax({
+            url: '/Categories/GetCategories', // Adjust to your API endpoint
+            type: 'GET',
+            success: function (data) {
+                var categoryDropdown = $('#CategoryId');
+                categoryDropdown.empty().append('<option value="">-- Select Category --</option>');
+
+                $.each(data, function (index, category) {
+                    var isSelected = category.categoryId == selectedCategoryId ? 'selected' : ''; // Mark the selected category
+                    categoryDropdown.append(`<option value="${category.categoryId}" ${isSelected}>${category.name}</option>`);
+                });
+            },
+            error: function () {
+                alert('Failed to load categories.');
+            }
+        });
+    });
+
 </script>

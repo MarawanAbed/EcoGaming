@@ -18,8 +18,6 @@ namespace PresentationLayer.ActionRequests.Products
         public int Stock { get; set; }
         [Required(ErrorMessage = "Image is required.")]
         public IFormFile Image { get; set; }
-        public List<SelectListItem> Categories { get; set; }
-
         public int CategoryId { get; set; }
 
     }

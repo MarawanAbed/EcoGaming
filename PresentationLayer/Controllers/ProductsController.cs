@@ -25,19 +25,11 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> AddProducts()
+        public  IActionResult AddProducts()
         {
-            var categories = await _categoryServices.GetAllCategories();
-            var model = new AddProductsActionRequest
-            {
-                Categories = categories.Select(c => new SelectListItem
-                {
-                    Value = c.CategoryId.ToString(),
-                    Text = c.Name
-                }).ToList()
-            };
-            return View(model);
+            return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> AddProducts(AddProductsActionRequest addProductsAction)
         {
@@ -51,19 +43,25 @@ namespace PresentationLayer.Controllers
                         Name = addProductsAction.Name,
                         Description = addProductsAction.Description,
                         Price = addProductsAction.Price,
-                        CategoryId = addProductsAction.CategoryId,
                         Stock = addProductsAction.Stock,
-                        ImageUrl = imageUrl
+                        ImageUrl = imageUrl,
+                        CategoryId = addProductsAction.CategoryId
                     };
                     await _productServices.AddProduct(productDto);
                     return RedirectToAction("Index");
                 }
+                else
+                {
+                    ModelState.AddModelError("", "Image upload failed.");
+                }
             }
-            addProductsAction.Categories = (await _categoryServices.GetAllCategories())
-        .Select(c => new SelectListItem { Value = c.CategoryId.ToString(), Text = c.Name })
-        .ToList();
-            return View(addProductsAction);
+            else
+            {
+                ModelState.AddModelError("", "Invalid form data.");
+            }
+          return View(addProductsAction);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> DeleteProduct(int id)
@@ -76,7 +74,6 @@ namespace PresentationLayer.Controllers
         public async Task<IActionResult> EditProduct(int id)
         {
             var product = await _productServices.GetProductById(id);
-            var categories = await _categoryServices.GetAllCategories();
             var model=new EditProductsActionRequest
             {
                 ProductId = product.ProductId,
@@ -84,15 +81,10 @@ namespace PresentationLayer.Controllers
                 Description = product.Description,
                 Price = product.Price,
                 CategoryId = product.CategoryId,
-                Categories = categories.Select(c => new SelectListItem
-                {
-                    Value = c.CategoryId.ToString(),
-                    Text = c.Name
-                }).ToList(),
                 Stock = product.Stock,
                 ExistingImagePath = product.ImageUrl
             };
-            return View(product);
+            return View(model);
         }
 
         [HttpPost]

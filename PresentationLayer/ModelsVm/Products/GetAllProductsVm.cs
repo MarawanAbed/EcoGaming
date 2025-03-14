@@ -13,7 +13,7 @@ namespace PresentationLayer.ModelsVm.Products
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
 
-        public static GetAllProductsVm FromProduct(ProductDto product)
+        public static GetAllProductsVm FromProduct(GetAllProductsDto product)
         {
             return new GetAllProductsVm
             {

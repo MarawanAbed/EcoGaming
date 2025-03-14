@@ -15,6 +15,12 @@ namespace PresentationLayer.Controllers
             _categoryServices = categoryServices;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetCategories()
+        {
+            var categories = await _categoryServices.GetAllCategories();
+            return Json(categories);
+        }
         public async Task<IActionResult> Index()
         {
 

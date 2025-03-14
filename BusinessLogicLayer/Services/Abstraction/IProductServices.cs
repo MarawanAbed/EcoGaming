@@ -4,7 +4,7 @@ namespace BusinessLogicLayer.Services.Abstraction
 {
     public interface IProductServices
     {
-        Task<IEnumerable<ProductDto>> GetAllProducts();
+        Task<IEnumerable<GetAllProductsDto>> GetAllProducts();
         Task<ProductDto> GetProductById(int id);
         Task AddProduct(ProductDto product);
         Task UpdateProduct(ProductDto product);

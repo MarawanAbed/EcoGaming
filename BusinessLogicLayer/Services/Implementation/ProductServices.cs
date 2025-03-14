@@ -30,10 +30,10 @@ namespace BusinessLogicLayer.Services.Implementation
             await _productRepo.DeleteProduct(id);
         }
 
-        public async Task<IEnumerable<ProductDto>> GetAllProducts()
+        public async Task<IEnumerable<GetAllProductsDto>> GetAllProducts()
         {
             var products = await _productRepo.GetAllProducts();
-            return _mapper.Map<IEnumerable<ProductDto>>(products);
+            return _mapper.Map<IEnumerable<GetAllProductsDto>>(products);
         }
 
         public async Task<ProductDto> GetProductById(int id)

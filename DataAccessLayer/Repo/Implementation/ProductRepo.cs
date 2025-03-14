@@ -39,7 +39,9 @@ namespace DataAccessLayer.Repo.Implementation
 
         public async Task<Product> GetProductById(int id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products
+                .Include(p => p.Category)  // Ensure Category is included
+                .FirstOrDefaultAsync(p => p.ProductId == id);
         }
 
         public async Task UpdateProduct(Product product)
