@@ -8,6 +8,7 @@ namespace DataAccessLayer.Repo.Abstraction
         Task<IEnumerable<Category>> GetAllCategories();
         Task<Category> GetCategoryById(int id);
         Task AddCategory(Category category);
+        Task<IEnumerable<Product>> GetProductsByCategory(int id);
         Task UpdateCategory(Category category);
         Task DeleteCategory(int id);
     }

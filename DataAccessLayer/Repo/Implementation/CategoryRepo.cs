@@ -43,6 +43,11 @@ namespace DataAccessLayer.Repo.Implementation
             return await _context.Categories.FindAsync(id);
         }
 
+        public async  Task<IEnumerable<Product>> GetProductsByCategory(int id)
+        {
+            return await _context.Products.Where(p=>p.CategoryId == id).ToListAsync();
+        }
+
         public async Task UpdateCategory(Category category)
         {
           var categoryEntity = await _context.Categories.FindAsync(category.CategoryId);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IuYwxTdOyxH/rcdioHBA5gvelVkyz2Xkz7HbKcqULUI=",
+  "Hash": "G0a7XHAuEw24G8R2/5MlZIevdnjuBL0fhdA2BL0e0wQ=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -246,6 +246,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "21vjdbz3dw",
+      "Integrity": "1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\af774365-b538-424a-a50a-b28c757df4d0_top25modernpcgames-blogroll-1663951042311.jpg",
@@ -2307,6 +2328,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-AMiTn7vUZWc5m8CiCly9R7y67zpt1ly5OOG8KwY+wIw="
+        }
+      ]
+    },
+    {
+      "Route": "Images/a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.21vjdbz3dw.jpg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 02:03:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "21vjdbz3dw"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 02:03:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0="
         }
       ]
     },

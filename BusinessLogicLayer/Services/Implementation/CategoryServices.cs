@@ -40,6 +40,12 @@ namespace BusinessLogicLayer.Services.Implementation
             return _mapper.Map<CategoryDto>(category);
         }
 
+        public async Task<IEnumerable<GetAllProductsDto>> GetProductsByCategories(int id)
+        {
+            var products=await categoryRepo.GetProductsByCategory(id);
+            return _mapper.Map<IEnumerable<GetAllProductsDto>>(products);
+        }
+
         public async Task UpdateCategory(CategoryDto category)
         {
             var categoryEntity = _mapper.Map<Category>(category);

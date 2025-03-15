@@ -37,6 +37,11 @@ namespace DataAccessLayer.Repo.Implementation
             //cuz i want to include the category of the product in the response
         }
 
+        public async Task<IEnumerable<Product>> GetPopularProducts(int id)
+        {
+            return await _context.Products.Where(p => p.CategoryId == id).Take(3).ToListAsync();
+        }
+
         public async Task<Product> GetProductById(int id)
         {
             return await _context.Products

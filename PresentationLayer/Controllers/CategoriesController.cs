@@ -3,6 +3,9 @@ using BusinessLogicLayer.Helper;
 using BusinessLogicLayer.Services.Abstraction;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer.ActionRequests.Categories;
+using PresentationLayer.ModelsVm.Browse;
+using PresentationLayer.ModelsVm.Categories;
+using PresentationLayer.ModelsVm.Products;
 
 namespace PresentationLayer.Controllers
 {
@@ -14,7 +17,37 @@ namespace PresentationLayer.Controllers
         {
             _categoryServices = categoryServices;
         }
+        public async Task<IActionResult> Browse(int id)
+        {
+            var category = await _categoryServices.GetCategoryById(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
 
+            var products = await _categoryServices.GetProductsByCategories(id);
+            var model = new BrowseVm
+            {
+                Category = category,
+                Products = products.Select(p => new GetAllProductsVm
+                {
+                    ProductId = p.ProductId,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Price = p.Price,
+                    ImageUrl = p.ImageUrl,
+                    Stock = p.Stock,
+                    CategoryId = p.CategoryId,
+                    CategoryName = category.Name
+                }).ToList(),
+                PrimaryColor = "#007bff",
+                SecondaryColor = "#6c757d",
+                BackgroundColor = "#f8f9fa",
+                TextColor = "#212529"
+            };
+
+            return View(model);
+        }
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
@@ -25,7 +58,8 @@ namespace PresentationLayer.Controllers
         {
 
             var categories = await _categoryServices.GetAllCategories();
-            return View(categories);
+            var model = categories.Select(GetAllCategoriesVm.FromCategory).ToList();
+            return View(model);
         }
 
         [HttpGet]

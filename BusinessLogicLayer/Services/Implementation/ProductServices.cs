@@ -36,6 +36,12 @@ namespace BusinessLogicLayer.Services.Implementation
             return _mapper.Map<IEnumerable<GetAllProductsDto>>(products);
         }
 
+        public async Task<IEnumerable<GetAllProductsDto>> GetPopularProducts(int id)
+        {
+            var popularProducts = await _productRepo.GetPopularProducts(id);
+            return _mapper.Map<IEnumerable<GetAllProductsDto>>(popularProducts);
+        }
+
         public async Task<ProductDto> GetProductById(int id)
         {
             var product = await _productRepo.GetProductById(id);

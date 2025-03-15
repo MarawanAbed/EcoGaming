@@ -11,7 +11,7 @@ namespace BusinessLogicLayer.Services.Abstraction
         Task<CategoryDto> GetCategoryById(int id);
         Task AddCategory(CategoryDto category);
         Task UpdateCategory(CategoryDto category);
-
+        Task <IEnumerable<GetAllProductsDto>> GetProductsByCategories(int id);
         Task DeleteCategory(int id);
 
     }

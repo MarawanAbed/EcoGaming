@@ -1,0 +1,38 @@
+﻿@using PresentationLayer.ModelsVm.Browse
+
+@model BrowseVm
+
+
+<style>
+    :root {
+        --primary-color: @Model.PrimaryColor;
+        --secondary-color: @Model.SecondaryColor;
+        --background-color: @Model.BackgroundColor;
+        --text-color: @Model.TextColor;
+    }
+</style>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">@Model.Category.Name</h2>
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-md-4">
+                <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
+                    <img src="~/Images/@product.ImageUrl" class="card-img-top rounded img-fluid" alt="@product.Name">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase fw-bold text-light">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <p class="text-warning mb-2">Stock: @product.Stock</p>
+                        <p class="fw-bold text-success fs-5">$@product.Price</p>
+                    </div>
+                    <div class="px-3 pb-4">
+                        <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" href="#">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

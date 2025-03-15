@@ -9,5 +9,7 @@ namespace BusinessLogicLayer.Services.Abstraction
         Task AddProduct(ProductDto product);
         Task UpdateProduct(ProductDto product);
         Task DeleteProduct(int id);
+        Task<IEnumerable<GetAllProductsDto>> GetPopularProducts(int id);
+
     }
 }
