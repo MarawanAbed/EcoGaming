@@ -5,6 +5,7 @@ using BusinessLogicLayer.DTOs;
 using BusinessLogicLayer.Services.Abstraction;
 using DataAccessLayer.Enitites;
 using DataAccessLayer.Repo.Abstraction;
+using MailKit.Search;
 
 namespace BusinessLogicLayer.Services.Implementation
 {
@@ -46,6 +47,18 @@ namespace BusinessLogicLayer.Services.Implementation
         {
             var product = await _productRepo.GetProductById(id);
             return _mapper.Map<ProductDto>(product);
+        }
+
+        public async Task<IEnumerable<GetAllProductsDto>> GetProductsByCategory(int id)
+        {
+            var products = await _productRepo.GetProdcutsByCategories(id);
+            return _mapper.Map<IEnumerable<GetAllProductsDto>>(products);
+        }
+
+        public async Task<IEnumerable<GetAllProductsDto>> SearchProductsByName(string name,int id)
+        {
+            var products=await _productRepo.GetProdcutsByCategories(id);
+            return _mapper.Map<IEnumerable<GetAllProductsDto>>(products.Where(p => p.Name.Contains(name, StringComparison.OrdinalIgnoreCase)));
         }
 
         public async Task UpdateProduct(ProductDto product)

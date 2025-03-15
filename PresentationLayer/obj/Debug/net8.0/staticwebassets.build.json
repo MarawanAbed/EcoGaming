@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G0a7XHAuEw24G8R2/5MlZIevdnjuBL0fhdA2BL0e0wQ=",
+  "Hash": "W9/qaXaBK97FMS0MU4Mvv9UG3Iil46NZlA4HHfWI+uQ=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -164,6 +164,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png"
     },
     {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "03at6twl26",
+      "Integrity": "THKqoRWykd414hvJNCrsAq4y38PX1dxIHgjYPDjRuyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg"
+    },
+    {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg",
       "SourceId": "PresentationLayer",
       "SourceType": "Discovered",
@@ -225,6 +246,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/68709ece-bb43-4ced-8dba-34cd2a7be3b6_download#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ybb82y3hma",
+      "Integrity": "opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png",
@@ -2004,6 +2046,88 @@
       ]
     },
     {
+      "Route": "Images/47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.03at6twl26.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169287"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"THKqoRWykd414hvJNCrsAq4y38PX1dxIHgjYPDjRuyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 03:16:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03at6twl26"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-THKqoRWykd414hvJNCrsAq4y38PX1dxIHgjYPDjRuyQ="
+        }
+      ]
+    },
+    {
+      "Route": "Images/47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169287"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"THKqoRWykd414hvJNCrsAq4y38PX1dxIHgjYPDjRuyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 03:16:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-THKqoRWykd414hvJNCrsAq4y38PX1dxIHgjYPDjRuyQ="
+        }
+      ]
+    },
+    {
       "Route": "Images/4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg",
       "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg",
       "Selectors": [],
@@ -2242,6 +2366,88 @@
         {
           "Name": "label",
           "Value": "Images/62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 02:32:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.ybb82y3hma.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 02:32:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ybb82y3hma"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg"
         },
         {
           "Name": "integrity",

@@ -10,5 +10,7 @@ namespace DataAccessLayer.Repo.Abstraction
         Task UpdateProduct(Product product);
         Task DeleteProduct(int id);
         Task<IEnumerable<Product>> GetPopularProducts(int id);
+        Task <IEnumerable<Product>> GetProdcutsByCategories(int id);
+
     }
 }

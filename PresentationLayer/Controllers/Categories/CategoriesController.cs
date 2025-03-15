@@ -7,29 +7,39 @@ using PresentationLayer.ModelsVm.Browse;
 using PresentationLayer.ModelsVm.Categories;
 using PresentationLayer.ModelsVm.Products;
 
-namespace PresentationLayer.Controllers
+namespace PresentationLayer.Controllers.Categories
 {
     public class CategoriesController : Controller
     {
         private readonly ICategoryServices _categoryServices;
+        private readonly IProductServices _productServices;
 
-        public CategoriesController(ICategoryServices categoryServices)
+        public CategoriesController(ICategoryServices categoryServices,IProductServices productServices)
         {
             _categoryServices = categoryServices;
+            _productServices = productServices;
         }
-        public async Task<IActionResult> Browse(int id)
+        public async Task<IActionResult> Browse(int id,string search=null)
         {
             var category = await _categoryServices.GetCategoryById(id);
             if (category == null)
             {
                 return NotFound();
             }
-
-            var products = await _categoryServices.GetProductsByCategories(id);
+            IEnumerable<GetAllProductsDto> searchProducts;
+            if(!string.IsNullOrEmpty(search))
+            {
+                searchProducts = await _productServices.SearchProductsByName(search,id);
+            }
+            else
+            {
+                searchProducts = await _productServices.GetProductsByCategory(id);
+            }
+            var products = await _productServices.GetProductsByCategory(id);
             var model = new BrowseVm
             {
                 Category = category,
-                Products = products.Select(p => new GetAllProductsVm
+                Products = searchProducts.Select(p => new GetAllProductsVm
                 {
                     ProductId = p.ProductId,
                     Name = p.Name,
@@ -40,10 +50,7 @@ namespace PresentationLayer.Controllers
                     CategoryId = p.CategoryId,
                     CategoryName = category.Name
                 }).ToList(),
-                PrimaryColor = "#007bff",
-                SecondaryColor = "#6c757d",
-                BackgroundColor = "#f8f9fa",
-                TextColor = "#212529"
+                Search = search
             };
 
             return View(model);
@@ -111,29 +118,29 @@ namespace PresentationLayer.Controllers
         [HttpPost]
         public async Task<IActionResult> EditCategory(EditCategoriesActionRequest categoriesAction)
         {
-                string imageUrl = categoriesAction.ExistingImagePath;
-                if (categoriesAction.Image != null)
+            string imageUrl = categoriesAction.ExistingImagePath;
+            if (categoriesAction.Image != null)
+            {
+                // ✅ Delete the old image if it exists
+                if (!string.IsNullOrEmpty(categoriesAction.ExistingImagePath))
                 {
-                    // ✅ Delete the old image if it exists
-                    if (!string.IsNullOrEmpty(categoriesAction.ExistingImagePath))
+                    string oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images", categoriesAction.ExistingImagePath);
+                    if (System.IO.File.Exists(oldImagePath))
                     {
-                        string oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images", categoriesAction.ExistingImagePath);
-                        if (System.IO.File.Exists(oldImagePath))
-                        {
-                            System.IO.File.Delete(oldImagePath);
-                        }
+                        System.IO.File.Delete(oldImagePath);
                     }
-                    // ✅ Upload the new image using the helper
-                    imageUrl = UploadFile.UploadImage(categoriesAction.Image, "Images");
                 }
-                var category = await _categoryServices.GetCategoryById(categoriesAction.CategoryId);
-                if (category != null)
-                {
-                    category.Name = categoriesAction.CategoryName;
-                    category.ImageUrl = imageUrl;
-                    await _categoryServices.UpdateCategory(category);
-                    return RedirectToAction("Index");
-                }
+                // ✅ Upload the new image using the helper
+                imageUrl = UploadFile.UploadImage(categoriesAction.Image, "Images");
+            }
+            var category = await _categoryServices.GetCategoryById(categoriesAction.CategoryId);
+            if (category != null)
+            {
+                category.Name = categoriesAction.CategoryName;
+                category.ImageUrl = imageUrl;
+                await _categoryServices.UpdateCategory(category);
+                return RedirectToAction("Index");
+            }
             return View(categoriesAction);
         }
     }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using PresentationLayer.ActionRequests.Products;
 using PresentationLayer.ModelsVm.Products;
 
-namespace PresentationLayer.Controllers
+namespace PresentationLayer.Controllers.Products
 {
     public class ProductsController : Controller
     {
@@ -25,7 +25,7 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpGet]
-        public  IActionResult AddProducts()
+        public IActionResult AddProducts()
         {
             return View();
         }
@@ -59,7 +59,7 @@ namespace PresentationLayer.Controllers
             {
                 ModelState.AddModelError("", "Invalid form data.");
             }
-          return View(addProductsAction);
+            return View(addProductsAction);
         }
 
 
@@ -74,7 +74,7 @@ namespace PresentationLayer.Controllers
         public async Task<IActionResult> EditProduct(int id)
         {
             var product = await _productServices.GetProductById(id);
-            var model=new EditProductsActionRequest
+            var model = new EditProductsActionRequest
             {
                 ProductId = product.ProductId,
                 Name = product.Name,

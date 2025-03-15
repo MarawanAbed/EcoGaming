@@ -3,17 +3,18 @@
 @model BrowseVm
 
 
-<style>
-    :root {
-        --primary-color: @Model.PrimaryColor;
-        --secondary-color: @Model.SecondaryColor;
-        --background-color: @Model.BackgroundColor;
-        --text-color: @Model.TextColor;
-    }
-</style>
+
 
 <div class="container mt-4">
     <h2 class="text-center mb-4">@Model.Category.Name</h2>
+
+    <form asp-action="Browse" asp-controller="Categories" method="get" class="mb-4">
+        <input type="hidden" name="id" value="@Model.Category.CategoryId" />
+        <div class="input-group">
+            <input type="text" asp-for="Search" class="form-control" placeholder="Search products..." value="@Model.Search" />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
     <div class="row">
         @foreach (var product in Model.Products)
         {

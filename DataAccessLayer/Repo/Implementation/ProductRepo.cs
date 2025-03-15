@@ -42,12 +42,19 @@ namespace DataAccessLayer.Repo.Implementation
             return await _context.Products.Where(p => p.CategoryId == id).Take(3).ToListAsync();
         }
 
+        public async Task<IEnumerable<Product>> GetProdcutsByCategories(int id)
+        {
+            return await _context.Products.Where(p => p.CategoryId == id).ToListAsync();
+        }
+
         public async Task<Product> GetProductById(int id)
         {
             return await _context.Products
                 .Include(p => p.Category)  // Ensure Category is included
                 .FirstOrDefaultAsync(p => p.ProductId == id);
         }
+
+
 
         public async Task UpdateProduct(Product product)
         {

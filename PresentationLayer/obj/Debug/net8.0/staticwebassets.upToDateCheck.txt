@@ -3,9 +3,11 @@ wwwroot\favicon.ico
 wwwroot\Images\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg
 wwwroot\Images\1deffea3-8ee9-4927-813e-3b23f4b14a2e_download.jpeg
 wwwroot\Images\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png
+wwwroot\Images\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg
 wwwroot\Images\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg
 wwwroot\Images\4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg
 wwwroot\Images\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg
+wwwroot\Images\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg
 wwwroot\Images\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png
 wwwroot\Images\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg
 wwwroot\Images\af774365-b538-424a-a50a-b28c757df4d0_top25modernpcgames-blogroll-1663951042311.jpg
