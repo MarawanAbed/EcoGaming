@@ -8,112 +8,137 @@
 @model List<CartDetailsDto>
 
 <div class="container mt-4">
-    <h2 class="text-light text-center mb-4">Shopping Cart</h2>
+	<h2 class="text-light text-center mb-4">Shopping Cart</h2>
 
-    <!-- Cart Items -->
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="card bg-dark text-light p-3 border border-secondary">
-                <a asp-action="ClearCart" asp-controller="Cart" class="btn btn-danger w-100 py-2 fw-bold">Clear Cart</a>
-                <div class="card-body">
-                    @if(Model.Any())
-                    {
-                        @foreach (var item in Model)
-                        {
-                            <div class="row mb-4 pb-3 border-bottom border-secondary cart-item">
-                                <div class="col-md-3 text-center">
-                                    <img src="~/Images/@item.ImageUrl" class="img-fluid rounded" alt="@item.Name" style="max-height: 120px;">
-                                </div>
-                                <div class="col-md-6">
-                                    <h5 class="fw-bold text-light">@item.Name</h5>
-                                    <p class="text-light-50">@item.Description</p>
-                                    <p class="fw-bold text-success item-price" data-price="@item.Price">$@item.Price</p>
-                                    <p class="text-light-50">Stock: @item.Stock</p>
-                                    <a asp-controller="Cart" asp-action="RemoveCartItem" asp-route-productId="@item.ProductId" class="text-danger">Remove</a>
-                                </div>
-                                <div class="col-md-3 text-center">
-                                    <input type="number" class="form-control text-center bg-dark text-light border border-secondary quantity-input"
-                                           value="@item.Quantity" min="1" max="@item.Stock" style="width: 60px; display: inline;">
-                                    <p class="fw-bold mt-2 item-total">$@(item.Price * item.Quantity)</p>
-                                </div>
-                            </div>
-                        }
+	<!-- Cart Items -->
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card bg-dark text-light p-3 border border-secondary">
+				<a asp-action="ClearCart" asp-controller="Cart"
+				   class="btn btn-danger w-100 py-2 fw-bold clear-cart">
+					Clear Cart
+				</a>
+				<div class="card-body">
+					@if (Model.Any())
+					{
+						@foreach (var item in Model)
+						{
+							<div class="row mb-4 pb-3 border-bottom border-secondary cart-item">
+								<div class="col-md-3 text-center">
+									<img src="~/Images/@item.ImageUrl" class="img-fluid rounded" alt="@item.Name" style="max-height: 120px;">
+								</div>
+								<div class="col-md-6">
+									<h5 class="fw-bold text-light">@item.Name</h5>
+									<p class="text-light-50">@item.Description</p>
+									<p class="fw-bold text-success item-price" data-price="@item.Price">$@item.Price</p>
+									<p class="text-light-50">Stock: @item.Stock</p>
+									<a asp-controller="Cart" asp-action="RemoveCartItem"
+									   asp-route-productId="@item.ProductId"
+									   class="text-danger remove-item"
+									   data-product-id="@item.ProductId">
+										Remove
+									</a>
+								</div>
+								<div class="col-md-3 text-center">
+									<input type="number" class="form-control text-center bg-dark text-light border border-secondary quantity-input"
+										   value="@item.Quantity" min="1" max="@item.Stock" style="width: 60px; display: inline;">
+									<p class="fw-bold mt-2 item-total">$@(item.Price * item.Quantity)</p>
+								</div>
+							</div>
+						}
 
-                    }else
-                    {
+					}
+					else
+					{
 						<div class="alert alert-warning" role="alert">
 							Your cart is empty.
 						</div>
-                    
-                     }
-                </div>
-            </div>
-        </div>
 
-        <!-- Cart Summary -->
-        <div class="col-lg-4">
-            <div class="card bg-dark text-light p-3 border border-secondary">
-                <div class="card-body">
-                    <h4 class="fw-bold text-light">Cart Summary</h4>
-                    <p class="text-light-50">Total Items: <span class="fw-bold" id="total-items">@Model.Sum(i => i.Quantity)</span></p>
-                    <p class="text-light-50">Total Price: <span class="fw-bold text-success" id="total-price">$@Model.Sum(i => i.Price * i.Quantity)</span></p>
+					}
+				</div>
+			</div>
+		</div>
 
-                    <a class="btn btn-primary w-100 py-2 fw-bold mt-3" asp-controller="Order" asp-action="Checkout">Proceed to Checkout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+		<!-- Cart Summary -->
+		<div class="col-lg-4">
+			<div class="card bg-dark text-light p-3 border border-secondary">
+				<div class="card-body">
+					<h4 class="fw-bold text-light">Cart Summary</h4>
+					<p class="text-light-50">Total Items: <span class="fw-bold" id="total-items">@Model.Sum(i => i.Quantity)</span></p>
+					<p class="text-light-50">Total Price: <span class="fw-bold text-success" id="total-price">$@Model.Sum(i => i.Price * i.Quantity)</span></p>
+
+					<a class="btn btn-primary w-100 py-2 fw-bold mt-3" asp-controller="Order" asp-action="Checkout">Proceed to Checkout</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function () {
-        loadCartQuantities(); // Load saved quantities from localStorage
+	$(document).ready(function () {
+		loadCartQuantities(); // Load saved quantities from localStorage
 
-        $(".quantity-input").on("change", function () {
-            let quantity = parseInt($(this).val());
-            let productId = $(this).closest(".cart-item").find(".remove-item").data("product-id");
+		$(".quantity-input").on("change", function () {
+			let quantity = parseInt($(this).val());
+			let productId = $(this).closest(".cart-item").data("product-id");
 
-            saveCartQuantity(productId, quantity);
-            updateCartSummary();
-        });
-        function updateCartSummary() {
-            let totalItems = 0;
-            let totalPrice = 0;
+			saveCartQuantity(productId, quantity);
+			updateCartSummary();
+		});
+			$(".clear-cart").on("click", function () {
+		localStorage.clear();  // Clears all cart-related items from localStorage
+	});
 
-            $(".cart-item").each(function () {
-                let quantity = parseInt($(this).find(".quantity-input").val());
-                let price = parseFloat($(this).find(".item-price").data("price"));
+		$(".remove-item").on("click", function (e) {
+			e.preventDefault();
+			let productId = $(this).data("product-id");
 
-                totalItems += quantity;
-                totalPrice += price * quantity;
+			removeCartQuantity(productId); // Remove from localStorage
+			window.location.href = $(this).attr("href"); // Proceed with the backend deletion
+		});
 
-                $(this).find(".item-total").text("$" + (price * quantity).toFixed(2));
-            });
+		function updateCartSummary() {
+			let totalItems = 0;
+			let totalPrice = 0;
 
-            $("#total-items").text(totalItems);
-            $("#total-price").text("$" + totalPrice.toFixed(2));
+			$(".cart-item").each(function () {
+				let quantity = parseInt($(this).find(".quantity-input").val());
+				let price = parseFloat($(this).find(".item-price").data("price"));
 
-            if ($(".cart-item").length === 0) {
-                $(".card-body").html('<div class="alert alert-warning">Your cart is empty.</div>');
-            }
-        }
+				totalItems += quantity;
+				totalPrice += price * quantity;
 
-        function saveCartQuantity(productId, quantity) {
-            localStorage.setItem("cart_quantity_" + productId, quantity);
-        }
+				$(this).find(".item-total").text("$" + (price * quantity).toFixed(2));
+			});
 
-        function loadCartQuantities() {
-            $(".quantity-input").each(function () {
-                let productId = $(this).closest(".cart-item").find(".remove-item").data("product-id");
-                let savedQuantity = localStorage.getItem("cart_quantity_" + productId);
-                if (savedQuantity) {
-                    $(this).val(savedQuantity);
-                }
-            });
+			$("#total-items").text(totalItems);
+			$("#total-price").text("$" + totalPrice.toFixed(2));
 
-            updateCartSummary();
-        }
-    });
+			if ($(".cart-item").length === 0) {
+				$(".card-body").html('<div class="alert alert-warning">Your cart is empty.</div>');
+			}
+		}
+
+		function saveCartQuantity(productId, quantity) {
+			localStorage.setItem("cart_quantity_" + productId, quantity);
+		}
+
+		function removeCartQuantity(productId) {
+			localStorage.removeItem("cart_quantity_" + productId);
+		}
+
+		function loadCartQuantities() {
+			$(".quantity-input").each(function () {
+				let productId = $(this).closest(".cart-item").data("product-id");
+				let savedQuantity = localStorage.getItem("cart_quantity_" + productId);
+				if (savedQuantity) {
+					$(this).val(savedQuantity);
+				}
+			});
+
+			updateCartSummary();
+		}
+	});
 </script>
 
 
