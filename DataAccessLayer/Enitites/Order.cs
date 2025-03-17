@@ -22,7 +22,7 @@ namespace DataAccessLayer.Enitites
 
         [Required(ErrorMessage = "Status is required.")]
         [StringLength(20, ErrorMessage = "Status cannot exceed 20 characters.")]
-        public string Status { get; set; }
+        public string OrderStatus { get; set; }
 
         // Foreign Key
         public string UserId { get; set; }

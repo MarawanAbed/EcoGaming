@@ -15,7 +15,7 @@ namespace DataAccessLayer.Repo.Implementation
             _context = context;
         }
         public async Task AddOrder(Order order)
-        {
+        {   
             await _context.Orders.AddAsync(order);
             await _context.SaveChangesAsync();
         }

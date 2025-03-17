@@ -17,9 +17,9 @@ namespace PresentationLayer.Controllers
             var orders = await _orderRepo.GetAllOrders();
             var totalOrders = orders.Count();
             var totalRevenue = orders.Sum(o => o.TotalAmount);
-            var pendingOrders = orders.Count(o => o.Status == "Pending");
-            var completedOrders = orders.Count(o => o.Status == "Completed");
-            var canceledOrders = orders.Count(o => o.Status == "Canceled");
+            var pendingOrders = orders.Count(o => o.OrderStatus == "Pending");
+            var completedOrders = orders.Count(o => o.OrderStatus == "Completed");
+            var canceledOrders = orders.Count(o => o.OrderStatus == "Canceled");
             var recentOrders = orders.OrderByDescending(o => o.OrderDate)
                          .Take(5)
                          .Select(o => new OrderDto
@@ -28,7 +28,7 @@ namespace PresentationLayer.Controllers
                              OrderDate = o.OrderDate,
                              TotalAmount = o.TotalAmount,
                              userName = o.User.UserName,
-                             Status = o.Status
+                             Status = o.OrderStatus
                          })
                          .ToList();
 
@@ -43,5 +43,8 @@ namespace PresentationLayer.Controllers
             };
             return View(model);
         }
+
+
+
     }
 }

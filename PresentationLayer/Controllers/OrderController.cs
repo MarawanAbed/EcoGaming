@@ -48,7 +48,7 @@ namespace PresentationLayer.Controllers
                 UserId = user.Id,
                 OrderDate = DateTime.UtcNow,
                 TotalAmount = cart.CartDetails.Sum(i => i.Price * i.Quantity),
-                Status = "Pending",
+                OrderStatus = "Pending",
                 OrderDetails = cart.CartDetails.Select(i => new OrderDetail
                 {
                     ProductId = i.ProductId,
@@ -78,7 +78,7 @@ namespace PresentationLayer.Controllers
 
                 // Update order status to "Paid"
                 var order = await _orderRepo.GetOrderById(user.Id);
-                order.Status = "Paid";
+                order.OrderStatus = "Paid";
                 await _orderRepo.UpdateOrder(order);
 
                 // Clear user's cart
@@ -103,7 +103,7 @@ namespace PresentationLayer.Controllers
             {
                 OrderId = o.OrderId,
                 OrderDate = o.OrderDate,
-                Status = o.Status,
+                Status = o.OrderStatus,
                 TotalAmount = o.TotalAmount,
                 OrderDetails = o.OrderDetails.Select(od => new OrderDetailDto
                 {

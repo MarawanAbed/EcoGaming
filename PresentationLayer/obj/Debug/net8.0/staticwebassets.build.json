@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nCSBMiwqvmSH8dLBeoiZN8HZG0g2Bsu95wFuWYllPa0=",
+  "Hash": "l9N7FubInOpsJTpHFR4VkzvL7IyMOVl0dWj0/yOoPw8=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/10f73c44-fa38-4b31-8518-48e3ba0ac287_download#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ybb82y3hma",
+      "Integrity": "opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
@@ -288,6 +309,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "21vjdbz3dw",
+      "Integrity": "1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png",
@@ -1821,6 +1863,88 @@
       ]
     },
     {
+      "Route": "Images/10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 22:33:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/10f73c44-fa38-4b31-8518-48e3ba0ac287_download.ybb82y3hma.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 22:33:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ybb82y3hma"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM="
+        }
+      ]
+    },
+    {
       "Route": "Images/11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
       "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
       "Selectors": [],
@@ -2555,6 +2679,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.21vjdbz3dw.jpg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 22:34:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "21vjdbz3dw"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 22:34:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0="
         }
       ]
     },
