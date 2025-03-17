@@ -19,6 +19,8 @@ namespace DataAccessLayer.Database
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartDetails> CartDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

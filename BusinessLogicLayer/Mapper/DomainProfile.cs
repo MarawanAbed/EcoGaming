@@ -24,6 +24,12 @@ namespace BusinessLogicLayer.Mapper
             CreateMap<Product, ProductDto>();
 
             CreateMap<Product, GetAllProductsDto>();
+
+            CreateMap<CartDto, Cart>();
+            CreateMap<Cart, CartDto>();
+
+            CreateMap<CartDetailsDto, CartDetails>();
+            CreateMap<CartDetails, CartDetailsDto>();
         }
     }
 }

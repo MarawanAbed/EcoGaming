@@ -22,6 +22,69 @@ namespace DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("DataAccessLayer.Enitites.Cart", b =>
+                {
+                    b.Property<int>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartId"));
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("CartId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("DataAccessLayer.Enitites.CartDetails", b =>
+                {
+                    b.Property<int>("CartDetailsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartDetailsId"));
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
+
+                    b.HasKey("CartDetailsId");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartDetails");
+                });
+
             modelBuilder.Entity("DataAccessLayer.Enitites.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -363,6 +426,36 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("DataAccessLayer.Enitites.Cart", b =>
+                {
+                    b.HasOne("DataAccessLayer.Extend.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DataAccessLayer.Enitites.CartDetails", b =>
+                {
+                    b.HasOne("DataAccessLayer.Enitites.Cart", "Cart")
+                        .WithMany("CartDetails")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DataAccessLayer.Enitites.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("DataAccessLayer.Enitites.Order", b =>
                 {
                     b.HasOne("DataAccessLayer.Extend.ApplicationUser", "User")
@@ -472,6 +565,11 @@ namespace DataAccessLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DataAccessLayer.Enitites.Cart", b =>
+                {
+                    b.Navigation("CartDetails");
                 });
 
             modelBuilder.Entity("DataAccessLayer.Enitites.Category", b =>

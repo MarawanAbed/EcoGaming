@@ -1,7 +1,46 @@
 ﻿
+using DataAccessLayer.Database;
+using DataAccessLayer.Enitites;
+using DataAccessLayer.Repo.Abstraction;
+using Microsoft.EntityFrameworkCore;
+
 namespace DataAccessLayer.Repo.Implementation
 {
-    internal class OrderRepo
+    public class OrderRepo : IOrderRepo
     {
+        private readonly ApplicationDbContext _context;
+
+        public OrderRepo(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public async Task AddOrder(Order order)
+        {
+            await _context.Orders.AddAsync(order);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteOrder(int orderId)
+        {
+            var order = await _context.Orders.FindAsync(orderId);
+            _context.Orders.Remove(order);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Order>> GetAllOrders()
+        {
+            return await _context.Orders.ToListAsync();
+        }
+
+        public async Task<Order> GetOrderById(int orderId)
+        {
+            return await _context.Orders.FindAsync(orderId);
+        }
+
+        public async Task UpdateOrder(Order order)
+        {
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+        }
     }
-}
+}  

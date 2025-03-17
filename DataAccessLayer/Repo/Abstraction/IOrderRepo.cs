@@ -1,8 +1,18 @@
 ﻿
 
+using DataAccessLayer.Enitites;
+
 namespace DataAccessLayer.Repo.Abstraction
 {
-    internal class IOrderRepo
+    public interface IOrderRepo
     {
+
+        Task AddOrder(Order order);
+        Task UpdateOrder(Order order);
+        Task DeleteOrder(int orderId);
+
+        Task<Order> GetOrderById(int orderId);
+
+        Task<IEnumerable<Order>> GetAllOrders();
     }
 }

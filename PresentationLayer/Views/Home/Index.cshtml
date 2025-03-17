@@ -59,9 +59,21 @@
                                 <p class="fw-bold text-success fs-5">$@product.Price</p>
                             </div>
                             <div class="px-3 pb-4">
-                                <a class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" href="#">
-                                    Buy Now
-                                </a>
+                                <form method="post" asp-controller="Cart" asp-action="AddToCart">
+                                    <input type="hidden" name="ProductId" value="@product.ProductId" />
+                                    <input type="hidden" name="ProductName" value="@product.Name" />
+                                    <input type="hidden" name="Price" value="@product.Price" />
+                                    <input type="hidden" name="ImageUrl" value="@product.ImageUrl" />
+                                    <input type="hidden" name="ProductDescription" value="@product.Description" />
+                                    <input type="hidden" name="Stock" value="@product.Stock" />
+
+                                    <button type="submit" class="btn btn-outline-primary w-100 py-2 fw-bold">
+                                        Buy Now
+                                    </button>
+                                </form>
+
+
+
                             </div>
                         </div>
                     </div>

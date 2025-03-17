@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W9/qaXaBK97FMS0MU4Mvv9UG3Iil46NZlA4HHfWI+uQ=",
+  "Hash": "nCSBMiwqvmSH8dLBeoiZN8HZG0g2Bsu95wFuWYllPa0=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -162,6 +162,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hzydh8kdkn",
+      "Integrity": "o7zm4M87/miXqh2uymv0fHsTMyTG8zYkGhNHT09JT/U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
@@ -2042,6 +2063,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-AMiTn7vUZWc5m8CiCly9R7y67zpt1ly5OOG8KwY+wIw="
+        }
+      ]
+    },
+    {
+      "Route": "Images/2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.hzydh8kdkn.png",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o7zm4M87/miXqh2uymv0fHsTMyTG8zYkGhNHT09JT/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 07:51:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hzydh8kdkn"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o7zm4M87/miXqh2uymv0fHsTMyTG8zYkGhNHT09JT/U="
+        }
+      ]
+    },
+    {
+      "Route": "Images/2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o7zm4M87/miXqh2uymv0fHsTMyTG8zYkGhNHT09JT/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 07:51:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o7zm4M87/miXqh2uymv0fHsTMyTG8zYkGhNHT09JT/U="
         }
       ]
     },

@@ -33,6 +33,8 @@ namespace PresentationLayer
             builder.Services.AddScoped<IProductRepo, ProductRepo>();
             builder.Services.AddScoped<IProductServices, ProductServices>();
             builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
+            builder.Services.AddScoped<ICartRepo, CartRepo>();
+            builder.Services.AddScoped<ICartServices, CartServices>();
             builder.Services.AddScoped<ICategoryServices, CategoryServices>();
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option =>
             {
@@ -42,6 +44,14 @@ namespace PresentationLayer
             );
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            builder.Services.AddDistributedMemoryCache(); // Required for session storage
 
             var app = builder.Build();
             using (var scope = app.Services.CreateScope())
@@ -63,6 +73,7 @@ namespace PresentationLayer
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSession(); // Enable session middleware
 
             app.MapControllerRoute(
                 name: "default",
