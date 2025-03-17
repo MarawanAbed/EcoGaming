@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using BusinessLogicLayer.DTOs;
 using BusinessLogicLayer.Helper;
+using BusinessLogicLayer.Services.Abstraction;
 using DataAccessLayer.Extend;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Identity;
@@ -18,12 +20,16 @@ namespace PresentationLayer.Controllers.Account
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly EmailServices _emailServices;
-        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager,EmailServices emailServices)
+        private readonly ICartServices _cartServices;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager,EmailServices emailServices, ICartServices cartServices, IHttpContextAccessor httpContextAccessor)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
             _roleManager = roleManager;
             _emailServices = emailServices;
+            _cartServices = cartServices;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpGet]
@@ -44,14 +50,15 @@ namespace PresentationLayer.Controllers.Account
 
                     if (result.Succeeded)
                     {
-                        if (loginAction.ReturnUrl != null)
-                        {
-                            return LocalRedirect(loginAction.ReturnUrl);
-                        }
-                        else
-                        {
-                            return RedirectToAction("Index", "Home");
-                        }
+                        var session = _httpContextAccessor.HttpContext.Session;
+                        var guestCart = session.GetGuestCart(); // Get guest cart from session
+
+                        // ✅ Merge guest cart with user cart
+                        await _cartServices.MergeGuestCartWithUserCart(user.Id, guestCart);
+
+                        session.ClearGuestCart(); // Clear guest cart from session after merging
+
+                        return loginAction.ReturnUrl != null ? LocalRedirect(loginAction.ReturnUrl) : RedirectToAction("Index", "Home");
                     }
                     else
                     {

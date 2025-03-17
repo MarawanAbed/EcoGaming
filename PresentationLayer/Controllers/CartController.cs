@@ -1,5 +1,7 @@
 ﻿using BusinessLogicLayer.DTOs;
 using BusinessLogicLayer.Services.Abstraction;
+using BusinessLogicLayer.Services.Implementation;
+using DataAccessLayer.Enitites;
 using DataAccessLayer.Extend;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +12,14 @@ public class CartController : Controller
 {
     private readonly ICartServices _services;
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public CartController(ICartServices services, UserManager<ApplicationUser> userManager)
+
+    public CartController(ICartServices services, UserManager<ApplicationUser> userManager, IHttpContextAccessor httpContextAccessor)
     {
         _services = services;
         _userManager = userManager;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     // ✅ View Cart
@@ -30,7 +35,8 @@ public class CartController : Controller
         }
         else
         {
-            cartItems = GetCartFromSession();
+            var session = _httpContextAccessor.HttpContext.Session;
+            cartItems = session.GetGuestCart();
         }
 
         return View(cartItems);
@@ -66,7 +72,9 @@ public class CartController : Controller
         }
         else
         {
-            List<CartDetailsDto> cart = GetCartFromSession();
+            var session = _httpContextAccessor.HttpContext.Session;
+            var cart = session.GetGuestCart();
+
             var existingItem = cart.FirstOrDefault(p => p.ProductId == addCartAction.ProductId);
 
             if (existingItem != null)
@@ -84,7 +92,7 @@ public class CartController : Controller
                         Description = addCartAction.ProductDescription,
                     });
 
-            SaveCartToSession(cart);
+            session.SaveGuestCart(cart);
         }
 
         return RedirectToAction("Index");
@@ -100,12 +108,13 @@ public class CartController : Controller
         }
         else
         {
-            List<CartDetailsDto> cart = GetCartFromSession();
+            var session = _httpContextAccessor.HttpContext.Session;
+            var cart = session.GetGuestCart() ?? new List<CartDetailsDto>(); // Ensure cart is never null
             var item = cart.FirstOrDefault(p => p.ProductId == productId);
             if (item != null)
             {
                 cart.Remove(item);
-                SaveCartToSession(cart);
+                session.SaveGuestCart(cart);
             }
         }
         return RedirectToAction("Index");
@@ -121,21 +130,10 @@ public class CartController : Controller
         }
         else
         {
-            SaveCartToSession(new List<CartDetailsDto>());
+            var session = _httpContextAccessor.HttpContext.Session;
+            session.ClearGuestCart();
         }
 
         return RedirectToAction("Index");
-    }
-
-    // ✅ Helper Method: Get Cart from Session
-    private List<CartDetailsDto> GetCartFromSession()
-    {
-        return HttpContext.Session.GetObject<List<CartDetailsDto>>("Cart") ?? new List<CartDetailsDto>();
-    }
-
-    // ✅ Helper Method: Save Cart to Session
-    private void SaveCartToSession(List<CartDetailsDto> cart)
-    {
-        HttpContext.Session.SetObject("Cart", cart);
     }
 }

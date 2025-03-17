@@ -33,6 +33,7 @@ namespace PresentationLayer
             builder.Services.AddScoped<IProductRepo, ProductRepo>();
             builder.Services.AddScoped<IProductServices, ProductServices>();
             builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
+            builder.Services.AddScoped<CartController, CartController>();
             builder.Services.AddScoped<ICartRepo, CartRepo>();
             builder.Services.AddScoped<ICartServices, CartServices>();
             builder.Services.AddScoped<ICategoryServices, CategoryServices>();
@@ -44,12 +45,8 @@ namespace PresentationLayer
             );
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
-                options.Cookie.HttpOnly = true;
-                options.Cookie.IsEssential = true;
-            });
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddSession(); // Ensure session services are added
 
             builder.Services.AddDistributedMemoryCache(); // Required for session storage
 

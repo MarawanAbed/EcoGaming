@@ -74,6 +74,63 @@ namespace BusinessLogicLayer.Services.Implementation
             return _mapper.Map<CartDto>(cart);
         }
 
+        public async Task MergeGuestCartWithUserCart(string userId, List<CartDetailsDto> guestCartDetails)
+        {
+            var userCart = await _cartRepo.GetCart(userId); // Retrieve user cart
+
+            if (guestCartDetails.Any())
+            {
+                if (userCart == null)
+                {
+                    // If user has no existing cart, create a new one
+                    var newCart = new Cart
+                    {
+                        UserId = userId,
+                        CartDetails = guestCartDetails.Select(gc => new CartDetails
+                        {
+                            ProductId = gc.ProductId,
+                            Price = gc.Price,
+                            Name = gc.Name,
+                            Quantity = gc.Quantity,
+                            ImageUrl = gc.ImageUrl,
+                            Description = gc.Description,
+                            Stock = gc.Stock
+                        }).ToList()
+                    };
+
+                    await _cartRepo.AddCart(newCart);
+                }
+                else
+                {
+                    // Merge the guest cart into the existing user cart
+                    foreach (var guestItem in guestCartDetails)
+                    {
+                        var existingItem = userCart.CartDetails.FirstOrDefault(i => i.ProductId == guestItem.ProductId);
+
+                        if (existingItem != null)
+                        {
+                            existingItem.Quantity += guestItem.Quantity; // Merge quantity
+                        }
+                        else
+                        {
+                            userCart.CartDetails.Add(new CartDetails
+                            {
+                                ProductId = guestItem.ProductId,
+                                Price = guestItem.Price,
+                                Name = guestItem.Name,
+                                Quantity = guestItem.Quantity,
+                                ImageUrl = guestItem.ImageUrl,
+                                Description = guestItem.Description,
+                                Stock = guestItem.Stock
+                            });
+                        }
+                    }
+
+                    await _cartRepo.UpdateCart();
+                }
+            }
+        }
+
 
         public async Task RemoveCartItem(string userId, int productId)
         {
@@ -86,6 +143,16 @@ namespace BusinessLogicLayer.Services.Implementation
                     cart.CartDetails.Remove(item);
                     await _cartRepo.UpdateCart();
                 }
+            }
+        }
+
+        public async Task UpdateCart(CartDto cart)
+        {
+            var existingCart = await _cartRepo.GetCart(cart.UserId);
+            if (existingCart != null)
+            {
+                existingCart.CartDetails = _mapper.Map<List<CartDetails>>(cart.CartDetails);
+                await _cartRepo.UpdateCart();
             }
         }
     }
