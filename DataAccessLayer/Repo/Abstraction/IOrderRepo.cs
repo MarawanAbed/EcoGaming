@@ -11,7 +11,8 @@ namespace DataAccessLayer.Repo.Abstraction
         Task UpdateOrder(Order order);
         Task DeleteOrder(int orderId);
 
-        Task<Order> GetOrderById(int orderId);
+        Task<List<Order>> GetOrdersByUserId(string userId);
+        Task<Order> GetOrderById(string userId);
 
         Task<IEnumerable<Order>> GetAllOrders();
     }

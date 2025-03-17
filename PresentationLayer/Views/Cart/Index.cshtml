@@ -67,7 +67,11 @@
 					<p class="text-light-50">Total Items: <span class="fw-bold" id="total-items">@Model.Sum(i => i.Quantity)</span></p>
 					<p class="text-light-50">Total Price: <span class="fw-bold text-success" id="total-price">$@Model.Sum(i => i.Price * i.Quantity)</span></p>
 
-					<a class="btn btn-primary w-100 py-2 fw-bold mt-3" asp-controller="Order" asp-action="Checkout">Proceed to Checkout</a>
+					<form asp-controller="Order" asp-action="Checkout" method="post">
+						<button type="submit" class="btn btn-primary w-100 py-2 fw-bold mt-3">
+							Proceed to Checkout
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>

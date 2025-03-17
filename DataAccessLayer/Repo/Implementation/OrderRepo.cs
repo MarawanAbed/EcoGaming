@@ -29,12 +29,27 @@ namespace DataAccessLayer.Repo.Implementation
 
         public async Task<IEnumerable<Order>> GetAllOrders()
         {
-            return await _context.Orders.ToListAsync();
+            return await _context.Orders
+                .Include(x => x.OrderDetails)
+                .Include(x => x.User).ToListAsync();
         }
 
-        public async Task<Order> GetOrderById(int orderId)
+        public Task<Order> GetOrderById(string userId)
         {
-            return await _context.Orders.FindAsync(orderId);
+            return _context.Orders
+                .Include(x => x.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefaultAsync(x => x.UserId == userId);
+        }
+
+        public async Task<List<Order>> GetOrdersByUserId(string userId)
+        {
+            return await _context.Orders
+                .Include(x => x.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .OrderByDescending(o => o.OrderDate)
+                .ToListAsync();
+
         }
 
         public async Task UpdateOrder(Order order)

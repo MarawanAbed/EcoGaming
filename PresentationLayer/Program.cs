@@ -8,9 +8,9 @@ using DataAccessLayer.Repo.Abstraction;
 using DataAccessLayer.Repo.Implementation;
 using DataAccessLayer.Seed;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
 
 namespace PresentationLayer
 {
@@ -21,6 +21,8 @@ namespace PresentationLayer
             var builder = WebApplication.CreateBuilder(args);
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
             builder.Services.AddSingleton<EmailServices>();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -33,6 +35,8 @@ namespace PresentationLayer
             builder.Services.AddScoped<IProductRepo, ProductRepo>();
             builder.Services.AddScoped<IProductServices, ProductServices>();
             builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
+            builder.Services.AddScoped<IOrderRepo, OrderRepo>();
+            builder.Services.AddScoped<ICheckoutServices, BusinessLogicLayer.Services.Implementation.CheckoutServices>();
             builder.Services.AddScoped<CartController, CartController>();
             builder.Services.AddScoped<ICartRepo, CartRepo>();
             builder.Services.AddScoped<ICartServices, CartServices>();
@@ -51,6 +55,8 @@ namespace PresentationLayer
             builder.Services.AddDistributedMemoryCache(); // Required for session storage
 
             var app = builder.Build();
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
