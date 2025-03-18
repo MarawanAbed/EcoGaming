@@ -78,7 +78,7 @@ public class CartController : Controller
             var existingItem = cart.FirstOrDefault(p => p.ProductId == addCartAction.ProductId);
 
             if (existingItem != null)
-                existingItem.Quantity++;
+                existingItem.Quantity ++; // Use the quantity from the request
             else
                 cart.Add(
                     new CartDetailsDto

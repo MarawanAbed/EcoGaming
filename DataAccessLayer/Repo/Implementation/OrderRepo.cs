@@ -42,6 +42,14 @@ namespace DataAccessLayer.Repo.Implementation
                 .FirstOrDefaultAsync(x => x.UserId == userId);
         }
 
+        public async Task<Order> GetOrderById(int orderId)
+        {
+            return await _context.Orders
+                .Include(x => x.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefaultAsync(x => x.OrderId == orderId);
+        }
+
         public async Task<List<Order>> GetOrdersByUserId(string userId)
         {
             return await _context.Orders

@@ -1,9 +1,4 @@
 ﻿@using BusinessLogicLayer.DTOs
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 @model OrderDashboardDto
 
 <div class="container mt-4">
@@ -11,28 +6,29 @@
 
     <div class="row">
         <!-- Order Summary Cards -->
-        <div class="col-md-3">
-            <div class="card bg-primary text-light text-center p-3">
-                <h5>Total Orders</h5>
-                <h3>@Model.TotalOrders</h3>
-            </div>
-        </div>
+
         <div class="col-md-3">
             <div class="card bg-success text-light text-center p-3">
                 <h5>Total Revenue</h5>
-                <h3>$@Model.TotalRevenue</h3>
+                <h3 id="total-revenue">$@Model.TotalRevenue</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-primary text-light text-center p-3">
+                <h5>Completed Orders</h5>
+                <h3 id="completed-orders">@Model.CompletedOrders</h3>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card bg-warning text-dark text-center p-3">
                 <h5>Pending Orders</h5>
-                <h3>@Model.PendingOrders</h3>
+                <h3 id="pending-orders">@Model.PendingOrders</h3>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card bg-danger text-light text-center p-3">
                 <h5>Canceled Orders</h5>
-                <h3>@Model.CanceledOrders</h3>
+                <h3 id="canceled-orders">@Model.CanceledOrders</h3>
             </div>
         </div>
     </div>
@@ -54,15 +50,18 @@
                 <tbody>
                     @foreach (var order in Model.RecentOrders)
                     {
-                        <tr>
+                        <tr id="order-@order.OrderId">
                             <td>@order.OrderId</td>
                             <td>@order.userName</td>
                             <td>@order.OrderDate.ToString("yyyy-MM-dd HH:mm")</td>
                             <td>$@order.TotalAmount</td>
                             <td>
-                                <span class="badge bg-@(order.Status == "Completed" ? "success" : (order.Status == "Pending" ? "warning" : "danger"))">
+                                <span id="status-@order.OrderId" class="badge bg-@(order.Status == "Completed" ? "success" : (order.Status == "Pending" ? "warning" : "danger"))">
                                     @order.Status
                                 </span>
+                                <button class="btn btn-sm btn-primary" onclick="updateStatus('@order.OrderId', 'Completed')">Mark as Completed</button>
+                                <button class="btn btn-sm btn-danger" onclick="updateStatus('@order.OrderId', 'Canceled')">Mark as Canceled</button>
+                                <button class="btn btn-sm btn-warning" onclick="updateStatus('@order.OrderId', 'Pending')">Mark as Pending</button>
                             </td>
                         </tr>
                     }
@@ -70,5 +69,34 @@
             </table>
         </div>
     </div>
+    <script>
+        function updateStatus(orderId, newStatus) {
+            fetch('/Orders/UpdateStatus', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ orderId: orderId, status: newStatus })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const statusElement = document.getElementById(`status-${orderId}`);
+                    statusElement.textContent = newStatus;
+                    statusElement.className = `badge bg-${newStatus === 'Completed' ? 'success' : (newStatus === 'Pending' ? 'warning' : 'danger')}`;
 
+                    // Update total counts
+                    document.getElementById('completed-orders').textContent = data.completedOrders;
+                    document.getElementById('pending-orders').textContent = data.pendingOrders;
+                    document.getElementById('canceled-orders').textContent = data.canceledOrders;
+                } else {
+                    alert('Failed to update status');
+                }
+            })
+            .catch(error => {
+                console.error('Error updating status:', error);
+                alert('An error occurred while updating status.');
+            });
+        }
+    </script>
 </div>

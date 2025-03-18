@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PresentationLayer.ActionRequests.Cart;
 using Stripe.Checkout;
 using Stripe.Climate;
 
@@ -32,7 +33,7 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Checkout()
+        public async Task<IActionResult> Checkout([FromBody] List<AddCartActionRequest> cartItems)
         {
             var user = await _userManager.GetUserAsync(User);
             var cart = await _cartServices.GetCart(user.Id);
@@ -40,6 +41,16 @@ namespace PresentationLayer.Controllers
             if (cart == null || !cart.CartDetails.Any())
             {
                 return RedirectToAction("Index", "Cart");
+            }
+
+            // Update cart quantities based on the received cartItems
+            foreach (var item in cartItems)
+            {
+                var cartItem = cart.CartDetails.FirstOrDefault(i => i.ProductId == item.ProductId);
+                if (cartItem != null)
+                {
+                    cartItem.Quantity = item.Quantity;
+                }
             }
 
             // Create Order in Database
@@ -63,7 +74,7 @@ namespace PresentationLayer.Controllers
             var checkoutService = new OrderService();
             var checkoutUrl = await _checkoutServices.CreateCheckoutSession(cart.CartDetails, user.Id);
 
-            return Redirect(checkoutUrl); // Redirect to Stripe
+            return Json(new { redirectUrl = checkoutUrl }); // Return the redirect URL for Stripe
         }
 
         public async Task<IActionResult> Success(string session_id)
