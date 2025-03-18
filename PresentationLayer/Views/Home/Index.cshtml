@@ -4,14 +4,25 @@
 }
 @model HomeVm
 
+<section class="hero-section">
+    <img alt="Hero Image"
+         src="~/Images/hero.webp" />
+    <div class="hero-content slide-in">
+        <h1 class="text-4xl font-bold">Level Up Your Gaming Experience</h1>
+        <p class="mt-4">Play Without Limits</p>
+
+    </div>
+</section>
+<div class="divider"></div>
+
 <div class="container mt-4">
 
     <!-- Categories Section -->
     <section class="mb-5">
         <h2 class="text-light text-center mb-4">Categories</h2>
         <div class="row">
-			@if (Model.Categories != null && Model.Categories.Any())
-			{
+            @if (Model.Categories != null && Model.Categories.Any())
+            {
                 @foreach (var category in Model.Categories)
                 {
                     <div class="col-md-4">
@@ -29,13 +40,13 @@
                     </div>
                 }
 
-			}
-			else
-			{
-				<div class="alert alert-warning" role="alert">
-					No categories found.
-				</div>
-			}
+            }
+            else
+            {
+                <div class="alert alert-warning" role="alert">
+                    No categories found.
+                </div>
+            }
         </div>
     </section>
 
@@ -52,11 +63,12 @@
 
                     <div class="col-md-4">
                         <div class="card border-0 p-3 shadow-lg border-top border-5 rounded bg-dark text-light">
-                            <img src="~/Images/@product.ImageUrl" class="card-img-top rounded img-fluid" alt="@product.Name">
+                            <img src="~/Images/@product.ImageUrl" class="card-img-top rounded  img-fluid" alt="@product.Name">
                             <div class="card-body text-center">
                                 <h5 class="card-title text-uppercase fw-bold text-light">@product.Name</h5>
                                 <p class="card-text text-light-50">@product.Description</p>
                                 <p class="fw-bold text-success fs-5">$@product.Price</p>
+                                <p class="text-warning mb-2">Stock: @product.Stock</p>
                             </div>
                             <div class="px-3 pb-4">
                                 <form method="post" asp-controller="Cart" asp-action="AddToCart">
@@ -67,18 +79,19 @@
                                     <input type="hidden" name="ProductDescription" value="@product.Description" />
                                     <input type="hidden" name="Stock" value="@product.Stock" />
 
-                                    <button type="submit" class="btn btn-outline-primary w-100 py-2 fw-bold">
+                                    <button type="submit" class="btn btn-outline-primary w-100 py-2 fw-bold product-btn" id="buy">
                                         Buy Now
                                     </button>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </div>
+
                 }
             </div>
         </section>
     }
+
+
 </div>
+

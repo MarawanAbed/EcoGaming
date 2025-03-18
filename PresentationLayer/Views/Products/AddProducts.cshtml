@@ -61,7 +61,7 @@
                     <a asp-action="Index" asp-controller="Products" class="btn btn-cancel">
                         <i class="fa fa-arrow-left"></i> Back
                     </a>
-                    <button type="submit" class="btn btn-add-product">
+                    <button type="submit" class="btn btn-add-product" id="add">
                         <i class="fa fa-plus"></i> Add Product
                     </button>
                 </div>
@@ -83,6 +83,8 @@
         };
         reader.readAsDataURL(event.target.files[0]);
     }
+
+
 
         $(document).ready(function () {
         $.ajax({

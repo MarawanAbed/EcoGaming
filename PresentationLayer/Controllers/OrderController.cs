@@ -6,13 +6,14 @@ using DataAccessLayer.Repo.Abstraction;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using PresentationLayer.ActionRequests.Cart;
 using Stripe.Checkout;
 using Stripe.Climate;
 
 namespace PresentationLayer.Controllers
 {
+    [Authorize]
+
     public class OrderController : Controller
     {
 

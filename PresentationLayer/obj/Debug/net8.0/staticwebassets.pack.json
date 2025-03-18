@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\PresentationLayer.k26lvnchex.bundle.scp.css"
     },
     {
-      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg",
-      "PackagePath": "staticwebassets\\Images\\10f73c44-fa38-4b31-8518-48e3ba0ac287_download.jpeg"
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\0e36030f-d79b-46d1-a425-c8b9adbb0e14_WhatsApp Image 2025-03-13 at 03.26.20_39fe21c1.jpg",
+      "PackagePath": "staticwebassets\\Images\\0e36030f-d79b-46d1-a425-c8b9adbb0e14_WhatsApp Image 2025-03-13 at 03.26.20_39fe21c1.jpg"
     },
     {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png"
     },
     {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg",
+      "PackagePath": "staticwebassets\\Images\\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg"
+    },
+    {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
       "PackagePath": "staticwebassets\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg"
     },
@@ -37,6 +41,14 @@
       "PackagePath": "staticwebassets\\Images\\4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg"
     },
     {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\59672091-96f3-4897-b9b5-57eee09e4958_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\59672091-96f3-4897-b9b5-57eee09e4958_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg",
+      "PackagePath": "staticwebassets\\Images\\5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg"
+    },
+    {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg",
       "PackagePath": "staticwebassets\\Images\\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg"
     },
@@ -47,6 +59,10 @@
     {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg",
       "PackagePath": "staticwebassets\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg"
     },
     {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png",
@@ -65,8 +81,20 @@
       "PackagePath": "staticwebassets\\Images\\af774365-b538-424a-a50a-b28c757df4d0_top25modernpcgames-blogroll-1663951042311.jpg"
     },
     {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\afbca9a1-fd26-4a30-8824-2022b1675a5b_fb_image_6285e2bfce3b9.png",
+      "PackagePath": "staticwebassets\\Images\\afbca9a1-fd26-4a30-8824-2022b1675a5b_fb_image_6285e2bfce3b9.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\b0fc819f-18b6-4ed8-8573-19ca6044866a_screencapture-game-rush-ui-myshopify-2025-03-18-03_35_17.png",
+      "PackagePath": "staticwebassets\\Images\\b0fc819f-18b6-4ed8-8573-19ca6044866a_screencapture-game-rush-ui-myshopify-2025-03-18-03_35_17.png"
+    },
+    {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\bca53c77-66c5-4c4c-b447-0dbc3803a26b_top25modernpcgames-blogroll-1663951042311.jpg",
       "PackagePath": "staticwebassets\\Images\\bca53c77-66c5-4c4c-b447-0dbc3803a26b_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\c681d846-9111-4770-a286-9fd93fa78428_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "PackagePath": "staticwebassets\\Images\\c681d846-9111-4770-a286-9fd93fa78428_god-of-war-hub-thumbnail-2018-en-29jul21.webp"
     },
     {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\cb74b79b-46eb-4aff-9607-354a05efa3e7_download.jpeg",
@@ -75,6 +103,10 @@
     {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\game.jpeg",
       "PackagePath": "staticwebassets\\Images\\game.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\hero.webp",
+      "PackagePath": "staticwebassets\\Images\\hero.webp"
     },
     {
       "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\css\\site.css",
