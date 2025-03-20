@@ -11,5 +11,8 @@ namespace BusinessLogicLayer.DTOs
         public string ImageUrl { get; set; }
         public int Stock { get; set; }
         public int CategoryId { get; set; }
+
+        public string AddedByUserId { get; set; } // Store the user's ID
+        public string AddedByRole { get; set; }   // Store the role (Admin or Buyer)
     }
 }

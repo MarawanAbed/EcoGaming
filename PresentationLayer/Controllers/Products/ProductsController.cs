@@ -1,6 +1,8 @@
 ﻿using BusinessLogicLayer.DTOs;
 using BusinessLogicLayer.Helper;
 using BusinessLogicLayer.Services.Abstraction;
+using DataAccessLayer.Extend;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PresentationLayer.ActionRequests.Products;
@@ -12,14 +14,20 @@ namespace PresentationLayer.Controllers.Products
     {
         private readonly IProductServices _productServices;
         private readonly ICategoryServices _categoryServices;
-        public ProductsController(IProductServices productServices, ICategoryServices categoryServices)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public ProductsController(IProductServices productServices, ICategoryServices categoryServices,UserManager<ApplicationUser> userManager)
         {
             _productServices = productServices;
             _categoryServices = categoryServices;
+            _userManager = userManager;
         }
         public async Task<IActionResult> Index()
         {
-            var products = await _productServices.GetAllProducts();
+            var user = await _userManager.GetUserAsync(User);
+            var roles = await _userManager.GetRolesAsync(user);
+            var role = roles.Contains("Admin") ? "Admin" : "Buyer";
+
+            var products = await _productServices.GetAllProducts(user.Id, role);
             var model = products.Select(GetAllProductsVm.FromProduct).ToList();
             return View(model);
         }
@@ -36,6 +44,10 @@ namespace PresentationLayer.Controllers.Products
             if (ModelState.IsValid)
             {
                 var imageUrl = UploadFile.UploadImage(addProductsAction.Image, "Images");
+                var user = await _userManager.GetUserAsync(User);
+
+                var roles = await _userManager.GetRolesAsync(user);
+
                 if (imageUrl != null)
                 {
                     var productDto = new ProductDto
@@ -45,7 +57,10 @@ namespace PresentationLayer.Controllers.Products
                         Price = addProductsAction.Price,
                         Stock = addProductsAction.Stock,
                         ImageUrl = imageUrl,
-                        CategoryId = addProductsAction.CategoryId
+                        CategoryId = addProductsAction.CategoryId,
+                        AddedByUserId = user.Id,
+                        AddedByRole = roles.Contains("Admin") ? "Admin" : "Buyer"
+
                     };
                     await _productServices.AddProduct(productDto);
                     return RedirectToAction("Index");

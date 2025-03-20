@@ -30,11 +30,17 @@ namespace DataAccessLayer.Repo.Implementation
             }
         }
 
-        public async Task<IEnumerable<Product>> GetAllProducts()
+        public async Task<IEnumerable<Product>> GetAllProducts(string userId, string role)
         {
-
-            return await _context.Products.Include(x => x.Category).ToListAsync();
-            //cuz i want to include the category of the product in the response
+            if (role == "Admin")
+            {
+                return await _context.Products.Include(x => x.Category).ToListAsync();
+            }
+            else
+            {
+                return await _context.Products.Where(p => p.AddedByUserId == userId)
+                    .Include(x => x.Category).ToListAsync();
+            }
         }
 
         public async Task<IEnumerable<Product>> GetPopularProducts(int id)

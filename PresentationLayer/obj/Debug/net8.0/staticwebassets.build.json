@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z5lCd6o5zujDSj+rUI3GDE0FLmrmljc+yc4RllhPGFU=",
+  "Hash": "cGJnWBLwIOoFOzdEiQRxaQF+VUeGXD7MhsV2lK/sTWY=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -267,6 +267,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x1q9mdzmtc",
+      "Integrity": "2zmVfNj6eO/uDEDr2KOIQaJ+0ynnY8d43Ua86/Tql78=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
@@ -2725,6 +2746,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-BdX/tRMoZfcEzsxoYCVXVWVEvCyBzP+b7+wPOUe0Y5Y="
+        }
+      ]
+    },
+    {
+      "Route": "Images/42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "741688"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2zmVfNj6eO/uDEDr2KOIQaJ+0ynnY8d43Ua86/Tql78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 18:55:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2zmVfNj6eO/uDEDr2KOIQaJ+0ynnY8d43Ua86/Tql78="
+        }
+      ]
+    },
+    {
+      "Route": "Images/42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.x1q9mdzmtc.png",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "741688"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2zmVfNj6eO/uDEDr2KOIQaJ+0ynnY8d43Ua86/Tql78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 18:55:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1q9mdzmtc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2zmVfNj6eO/uDEDr2KOIQaJ+0ynnY8d43Ua86/Tql78="
         }
       ]
     },

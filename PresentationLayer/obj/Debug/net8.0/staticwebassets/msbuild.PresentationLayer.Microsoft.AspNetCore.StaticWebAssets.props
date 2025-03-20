@@ -180,6 +180,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>x1q9mdzmtc</Fingerprint>
+      <Integrity>2zmVfNj6eO/uDEDr2KOIQaJ+0ynnY8d43Ua86/Tql78=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>PresentationLayer</SourceId>

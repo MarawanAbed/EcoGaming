@@ -8,6 +8,7 @@ wwwroot\Images\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820
 wwwroot\Images\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png
 wwwroot\Images\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg
 wwwroot\Images\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg
+wwwroot\Images\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png
 wwwroot\Images\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg
 wwwroot\Images\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg
 wwwroot\Images\4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg

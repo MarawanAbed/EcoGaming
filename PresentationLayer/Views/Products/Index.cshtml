@@ -23,6 +23,7 @@
 				<th>Description </th>
                 <th>Price</th>
                 <th>Stock</th>
+                <th>Added By</th>
                 <th>Category</th>
                 <th>Actions</th>
             </tr>
@@ -48,6 +49,7 @@
 						<td>@product.Description</td>
                         <td>$@product.Price</td>
                         <td>@product.Stock</td>
+                        <td>@product.AddedByRole</td>
                         <td>@product.CategoryName</td>
                         <td>
                             <a asp-action="EditProduct" asp-route-id="@product.ProductId" class="btn btn-sm btn-warning">Edit</a>

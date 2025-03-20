@@ -34,5 +34,8 @@ namespace DataAccessLayer.Enitites
         // Foreign Key
         public int CategoryId { get; set; }
         public Category Category { get; set; } // Navigation property
+
+        public string AddedByUserId { get; set; } // Store the user's ID
+        public string AddedByRole { get; set; }   // Store the role (Admin or Buyer)
     }
 }

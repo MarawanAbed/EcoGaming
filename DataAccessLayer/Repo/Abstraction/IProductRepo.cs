@@ -4,7 +4,7 @@ namespace DataAccessLayer.Repo.Abstraction
 {
     public interface IProductRepo
     {
-        Task<IEnumerable<Product>> GetAllProducts();
+        Task<IEnumerable<Product>> GetAllProducts(string userId, string role);
         Task<Product> GetProductById(int id);
         Task AddProduct(Product product);
         Task UpdateProduct(Product product);
