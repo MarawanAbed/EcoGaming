@@ -21,12 +21,15 @@ namespace PresentationLayer.Controllers.Orders
         private readonly ICartServices _cartServices;
         private readonly ICheckoutServices _checkoutServices;
         private readonly IOrderServices _orderServices;
-        public OrderController(UserManager<ApplicationUser> userManager, ICartServices cartServices, IOrderServices order, ICheckoutServices checkout)
+        private readonly ILogger<OrderController> _logger;
+
+        public OrderController(UserManager<ApplicationUser> userManager, ICartServices cartServices, IOrderServices order, ICheckoutServices checkout, ILogger<OrderController> logger)
         {
             _userManager = userManager;
             _cartServices = cartServices;
             _orderServices = order;
             _checkoutServices = checkout;
+            _logger = logger;
         }
         public IActionResult Index()
         {
@@ -74,11 +77,16 @@ namespace PresentationLayer.Controllers.Orders
 
             await _orderServices.AddOrder(newOrder);
 
-            // Initiate Stripe Payment
-            var checkoutService = new OrderService();
-            var checkoutUrl = await _checkoutServices.CreateCheckoutSession(cart.CartDetails, user.Id);
-
-            return Json(new { redirectUrl = checkoutUrl }); // Return the redirect URL for Stripe
+            try
+            {
+                var checkoutUrl = await _checkoutServices.CreateCheckoutSession(cart.CartDetails, user.Id);
+                return Json(new { redirectUrl = checkoutUrl }); // Return the redirect URL for Stripe
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during checkout");
+                return StatusCode(500, "An error occurred during checkout. Please try again later.");
+            }
         }
 
         public async Task<IActionResult> Success(string session_id)

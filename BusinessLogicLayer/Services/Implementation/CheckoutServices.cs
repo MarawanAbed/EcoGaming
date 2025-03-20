@@ -23,7 +23,9 @@ namespace BusinessLogicLayer.Services.Implementation
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
                             Name = item.Name,
-                            Images = new List<string> { domain + "/Images/" + item.ImageUrl }
+                            Images = !string.IsNullOrEmpty(item.ImageUrl) && Uri.IsWellFormedUriString(domain + "/Images/" + item.ImageUrl, UriKind.Absolute)
+                                ? new List<string> { domain + "/Images/" + item.ImageUrl }
+                                : new List<string> { "http://localhost:5121/game.jpeg" } 
                         }
                     },
                     Quantity = item.Quantity

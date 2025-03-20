@@ -61,10 +61,10 @@ namespace BusinessLogicLayer.Services.Implementation
             return _mapper.Map<IEnumerable<GetAllProductsDto>>(products.Where(p => p.Name.Contains(name, StringComparison.OrdinalIgnoreCase)));
         }
 
-        public async Task UpdateProduct(ProductDto product)
+        public async Task UpdateProduct(ProductDto product, string userId, string role)
         {
             var productEntity = _mapper.Map<Product>(product);
-            await _productRepo.UpdateProduct(productEntity);
+            await _productRepo.UpdateProduct(productEntity,userId,role);
         }
     }
 }

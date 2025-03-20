@@ -84,6 +84,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AMiTn7vUZWc5m8CiCly9R7y67zpt1ly5OOG8KwY\u002BwIw="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"117375"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022AMiTn7vUZWc5m8CiCly9R7y67zpt1ly5OOG8KwY\u002BwIw=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 00:18:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PresentationLayer/Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.351us6g9q1.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"351us6g9q1"},{"Name":"integrity","Value":"sha256-ueod5BF5/1/cX7r6rN1lzm7aDh7\u002B17ZBHSF9VGAoimk="},{"Name":"label","Value":"_content/PresentationLayer/Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"70986"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022ueod5BF5/1/cX7r6rN1lzm7aDh7\u002B17ZBHSF9VGAoimk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Mar 2025 19:41:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PresentationLayer/Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ueod5BF5/1/cX7r6rN1lzm7aDh7\u002B17ZBHSF9VGAoimk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"70986"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022ueod5BF5/1/cX7r6rN1lzm7aDh7\u002B17ZBHSF9VGAoimk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Mar 2025 19:41:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/PresentationLayer/Images/2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.hzydh8kdkn.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -227,6 +239,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"236732"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Mar 2025 22:34:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PresentationLayer/Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.c2jp3u125o.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c2jp3u125o"},{"Name":"integrity","Value":"sha256-PCgRxs6Cojq6verSxVCVrvG6cR7\u002BOBc/7cPhIHhJqDg="},{"Name":"label","Value":"_content/PresentationLayer/Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"691600"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022PCgRxs6Cojq6verSxVCVrvG6cR7\u002BOBc/7cPhIHhJqDg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Mar 2025 19:47:22 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PresentationLayer/Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PCgRxs6Cojq6verSxVCVrvG6cR7\u002BOBc/7cPhIHhJqDg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"691600"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022PCgRxs6Cojq6verSxVCVrvG6cR7\u002BOBc/7cPhIHhJqDg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Mar 2025 19:47:22 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/PresentationLayer/Images/7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.21vjdbz3dw.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg'))</AssetFile>

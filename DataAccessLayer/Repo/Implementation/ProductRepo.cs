@@ -62,20 +62,28 @@ namespace DataAccessLayer.Repo.Implementation
 
 
 
-        public async Task UpdateProduct(Product product)
+        public async Task UpdateProduct(Product product, string userId, string role)
         {
             
             var productEntity = await _context.Products.FindAsync(product.ProductId);
             if (productEntity != null) 
             {
-                productEntity.Name = product.Name;
-                productEntity.Price = product.Price;
-                productEntity.CategoryId = product.CategoryId;
-                productEntity.Description = product.Description;
-                productEntity.ImageUrl = product.ImageUrl;
-                productEntity.Stock = product.Stock;
-                productEntity.Category = product.Category;
+                if (role == "Admin" || productEntity.AddedByUserId == userId)
+                {
+                    productEntity.Name = product.Name;
+                    productEntity.Price = product.Price;
+                    productEntity.CategoryId = product.CategoryId;
+                    productEntity.Description = product.Description;
+                    productEntity.Stock = product.Stock;
+                    productEntity.Category = product.Category;
+
+                    if (!string.IsNullOrEmpty(product.ImageUrl))
+                    {
+                        productEntity.ImageUrl = product.ImageUrl;
+                    }
+                }
             }
+            _context.Entry(entity: productEntity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
     }

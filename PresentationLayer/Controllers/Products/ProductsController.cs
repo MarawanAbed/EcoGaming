@@ -107,17 +107,31 @@ namespace PresentationLayer.Controllers.Products
         {
             if (ModelState.IsValid)
             {
+                var user = await _userManager.GetUserAsync(User);
+                var roles = await _userManager.GetRolesAsync(user);
+                var role = roles.Contains("Admin") ? "Admin" : "Buyer";
+
+                var imageUrl = editProductRequest.ExistingImagePath;
+                if (editProductRequest.Image != null) // If user uploaded a new image
+                {
+                    imageUrl = UploadFile.UploadImage(editProductRequest.Image, "Images");
+                }
+
                 var productDto = new ProductDto
                 {
+                    ProductId = editProductRequest.ProductId,
                     Name = editProductRequest.Name,
                     Description = editProductRequest.Description,
                     Price = editProductRequest.Price,
                     CategoryId = editProductRequest.CategoryId,
                     Stock = editProductRequest.Stock,
-                    ProductId = editProductRequest.ProductId,
-                    ImageUrl = editProductRequest.ExistingImagePath
+                    ImageUrl = imageUrl,
+                    AddedByUserId = user.Id,
+                    AddedByRole = role
                 };
-                await _productServices.UpdateProduct(productDto);
+
+                await _productServices.UpdateProduct(productDto, user.Id, role);
+
                 return RedirectToAction("Index");
             }
             return View(editProductRequest);

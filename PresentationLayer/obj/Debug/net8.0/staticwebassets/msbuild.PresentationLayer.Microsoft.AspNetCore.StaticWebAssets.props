@@ -126,6 +126,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>351us6g9q1</Fingerprint>
+      <Integrity>ueod5BF5/1/cX7r6rN1lzm7aDh7+17ZBHSF9VGAoimk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png'))">
       <SourceType>Package</SourceType>
       <SourceId>PresentationLayer</SourceId>
@@ -341,6 +359,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>c2jp3u125o</Fingerprint>
+      <Integrity>PCgRxs6Cojq6verSxVCVrvG6cR7+OBc/7cPhIHhJqDg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg'))">
       <SourceType>Package</SourceType>

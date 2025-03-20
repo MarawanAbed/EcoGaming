@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cGJnWBLwIOoFOzdEiQRxaQF+VUeGXD7MhsV2lK/sTWY=",
+  "Hash": "5JqaN7RNf5ZnQC0gjH+c3EffVL8x5K7fWVuaeqfm/+I=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -204,6 +204,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "351us6g9q1",
+      "Integrity": "ueod5BF5/1/cX7r6rN1lzm7aDh7+17ZBHSF9VGAoimk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
@@ -456,6 +477,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c2jp3u125o",
+      "Integrity": "PCgRxs6Cojq6verSxVCVrvG6cR7+OBc/7cPhIHhJqDg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg",
@@ -2504,6 +2546,88 @@
       ]
     },
     {
+      "Route": "Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.351us6g9q1.webp",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70986"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ueod5BF5/1/cX7r6rN1lzm7aDh7+17ZBHSF9VGAoimk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 19:41:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "351us6g9q1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ueod5BF5/1/cX7r6rN1lzm7aDh7+17ZBHSF9VGAoimk="
+        }
+      ]
+    },
+    {
+      "Route": "Images/1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70986"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ueod5BF5/1/cX7r6rN1lzm7aDh7+17ZBHSF9VGAoimk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 19:41:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ueod5BF5/1/cX7r6rN1lzm7aDh7+17ZBHSF9VGAoimk="
+        }
+      ]
+    },
+    {
       "Route": "Images/2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.hzydh8kdkn.png",
       "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
       "Selectors": [],
@@ -3484,6 +3608,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.c2jp3u125o.webp",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691600"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PCgRxs6Cojq6verSxVCVrvG6cR7+OBc/7cPhIHhJqDg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 19:47:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c2jp3u125o"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PCgRxs6Cojq6verSxVCVrvG6cR7+OBc/7cPhIHhJqDg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691600"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PCgRxs6Cojq6verSxVCVrvG6cR7+OBc/7cPhIHhJqDg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 19:47:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PCgRxs6Cojq6verSxVCVrvG6cR7+OBc/7cPhIHhJqDg="
         }
       ]
     },
