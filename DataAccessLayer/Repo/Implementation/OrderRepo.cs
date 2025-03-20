@@ -62,8 +62,13 @@ namespace DataAccessLayer.Repo.Implementation
 
         public async Task UpdateOrder(Order order)
         {
-            _context.Orders.Update(order);
-            await _context.SaveChangesAsync();
+
+            var orderToUpdate = await _context.Orders.FindAsync(order.OrderId);
+            if (orderToUpdate != null)
+            {
+                orderToUpdate.OrderStatus = order.OrderStatus;
+            }
+                await _context.SaveChangesAsync();
         }
     }
 }  

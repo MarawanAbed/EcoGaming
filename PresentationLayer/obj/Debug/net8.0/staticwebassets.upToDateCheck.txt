@@ -1,10 +1,12 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\Images\0e36030f-d79b-46d1-a425-c8b9adbb0e14_WhatsApp Image 2025-03-13 at 03.26.20_39fe21c1.jpg
+wwwroot\Images\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg
 wwwroot\Images\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg
 wwwroot\Images\1deffea3-8ee9-4927-813e-3b23f4b14a2e_download.jpeg
 wwwroot\Images\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png
 wwwroot\Images\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png
+wwwroot\Images\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg
 wwwroot\Images\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg
 wwwroot\Images\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg
 wwwroot\Images\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg

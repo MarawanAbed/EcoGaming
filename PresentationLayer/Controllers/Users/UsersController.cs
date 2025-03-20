@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PresentationLayer.ModelsVm.Users;
 
-namespace PresentationLayer.Controllers
+namespace PresentationLayer.Controllers.Users
 {
     public class UsersController : Controller
     {
@@ -92,7 +92,7 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {

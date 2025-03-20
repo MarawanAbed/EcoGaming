@@ -52,12 +52,12 @@
                     {
                         <tr id="order-@order.OrderId">
                             <td>@order.OrderId</td>
-                            <td>@order.userName</td>
+                            <td>@order.UserName</td>
                             <td>@order.OrderDate.ToString("yyyy-MM-dd HH:mm")</td>
                             <td>$@order.TotalAmount</td>
                             <td>
-                                <span id="status-@order.OrderId" class="badge bg-@(order.Status == "Completed" ? "success" : (order.Status == "Pending" ? "warning" : "danger"))">
-                                    @order.Status
+                                <span id="status-@order.OrderId" class="badge bg-@(order.OrderStatus == "Completed" ? "success" : (order.OrderStatus == "Pending" ? "warning" : "danger"))">
+                                    @order.OrderStatus
                                 </span>
                                 <button class="btn btn-sm btn-primary" onclick="updateStatus('@order.OrderId', 'Completed')">Mark as Completed</button>
                                 <button class="btn btn-sm btn-danger" onclick="updateStatus('@order.OrderId', 'Canceled')">Mark as Canceled</button>

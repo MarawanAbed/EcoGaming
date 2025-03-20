@@ -28,8 +28,25 @@ namespace BusinessLogicLayer.Mapper
             CreateMap<CartDto, Cart>();
             CreateMap<Cart, CartDto>();
 
-            CreateMap<CartDetailsDto, CartDetails>();
+            // Mapping from Order entity to OrderDto
+            CreateMap<Order, OrderDto>()
+                .ForMember(dest => dest.UserName, opt => opt.Ignore()); // Ignore userName property
+
+            // Mapping from OrderDto to Order entity
+            CreateMap<OrderDto, Order>();
+
+            // Mapping from OrderDetail entity to OrderDetailDto
+            CreateMap<OrderDetailDto, OrderDetail>();
+
+
+            // Mapping from OrderDetailDto to OrderDetail entity
+            CreateMap<OrderDetail, OrderDetailDto>();
+
+            // Mapping from CartDetails entity to CartDetailsDto
             CreateMap<CartDetails, CartDetailsDto>();
+
+            // Mapping from CartDetailsDto to CartDetails entity
+            CreateMap<CartDetailsDto, CartDetails>();
         }
     }
 }

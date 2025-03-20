@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9hpg4RjHGkaLjB53U7pg0pmBFj7qqL1uan5EdZYs350=",
+  "Hash": "z5lCd6o5zujDSj+rUI3GDE0FLmrmljc+yc4RllhPGFU=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -122,6 +122,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\0e36030f-d79b-46d1-a425-c8b9adbb0e14_WhatsApp Image 2025-03-13 at 03.26.20_39fe21c1.jpg"
     },
     {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "smxa0bz9li",
+      "Integrity": "xETpmhG0YhZBWXpX5adaRnahhbfYfFNKv+Pev77EDD0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg"
+    },
+    {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
       "SourceId": "PresentationLayer",
       "SourceType": "Discovered",
@@ -204,6 +225,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png"
+    },
+    {
+      "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "Images/3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1)#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "agfgzvngol",
+      "Integrity": "xv7+lzUUkY/PydY8YTVC1jHUQUx4tiG2LGLMxd6ZPps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg"
     },
     {
       "Identity": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg",
@@ -2113,6 +2155,88 @@
       ]
     },
     {
+      "Route": "Images/1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xETpmhG0YhZBWXpX5adaRnahhbfYfFNKv+Pev77EDD0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 12:42:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xETpmhG0YhZBWXpX5adaRnahhbfYfFNKv+Pev77EDD0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.smxa0bz9li.jpg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xETpmhG0YhZBWXpX5adaRnahhbfYfFNKv+Pev77EDD0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 12:42:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "smxa0bz9li"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xETpmhG0YhZBWXpX5adaRnahhbfYfFNKv+Pev77EDD0="
+        }
+      ]
+    },
+    {
       "Route": "Images/11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
       "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
       "Selectors": [],
@@ -2437,6 +2561,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-o7zm4M87/miXqh2uymv0fHsTMyTG8zYkGhNHT09JT/U="
+        }
+      ]
+    },
+    {
+      "Route": "Images/3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).agfgzvngol.jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xv7+lzUUkY/PydY8YTVC1jHUQUx4tiG2LGLMxd6ZPps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 12:38:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "agfgzvngol"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xv7+lzUUkY/PydY8YTVC1jHUQUx4tiG2LGLMxd6ZPps="
+        }
+      ]
+    },
+    {
+      "Route": "Images/3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg",
+      "AssetFile": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xv7+lzUUkY/PydY8YTVC1jHUQUx4tiG2LGLMxd6ZPps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 12:38:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xv7+lzUUkY/PydY8YTVC1jHUQUx4tiG2LGLMxd6ZPps="
         }
       ]
     },

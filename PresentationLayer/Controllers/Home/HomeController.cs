@@ -7,14 +7,14 @@ using PresentationLayer.ModelsVm.Home;
 using PresentationLayer.ModelsVm.Popular;
 using PresentationLayer.ModelsVm.Products;
 
-namespace PresentationLayer.Controllers
+namespace PresentationLayer.Controllers.Home
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ICategoryServices _category;
-        private readonly IProductServices _product; 
-        public HomeController(ILogger<HomeController> logger, ICategoryServices category,IProductServices productServices)
+        private readonly IProductServices _product;
+        public HomeController(ILogger<HomeController> logger, ICategoryServices category, IProductServices productServices)
         {
             _logger = logger;
             _category = category;

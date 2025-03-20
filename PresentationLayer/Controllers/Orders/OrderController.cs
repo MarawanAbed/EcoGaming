@@ -10,7 +10,7 @@ using PresentationLayer.ActionRequests.Cart;
 using Stripe.Checkout;
 using Stripe.Climate;
 
-namespace PresentationLayer.Controllers
+namespace PresentationLayer.Controllers.Orders
 {
     [Authorize]
 
@@ -18,14 +18,14 @@ namespace PresentationLayer.Controllers
     {
 
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IOrderRepo _orderRepo;
         private readonly ICartServices _cartServices;
         private readonly ICheckoutServices _checkoutServices;
-        public OrderController(UserManager<ApplicationUser> userManager,ICartServices cartServices,IOrderRepo order,ICheckoutServices checkout)
+        private readonly IOrderServices _orderServices;
+        public OrderController(UserManager<ApplicationUser> userManager, ICartServices cartServices, IOrderServices order, ICheckoutServices checkout)
         {
             _userManager = userManager;
             _cartServices = cartServices;
-            _orderRepo = order;
+            _orderServices = order;
             _checkoutServices = checkout;
         }
         public IActionResult Index()
@@ -47,7 +47,8 @@ namespace PresentationLayer.Controllers
             // Update cart quantities based on the received cartItems
             foreach (var item in cartItems)
             {
-                var cartItem = cart.CartDetails.FirstOrDefault(i => i.ProductId == item.ProductId);
+                var cartItem = cart.CartDetails.
+                    FirstOrDefault(i => i.ProductId == item.ProductId);
                 if (cartItem != null)
                 {
                     cartItem.Quantity = item.Quantity;
@@ -55,21 +56,23 @@ namespace PresentationLayer.Controllers
             }
 
             // Create Order in Database
-            var newOrder = new DataAccessLayer.Enitites.Order
+            var newOrder = new OrderDto
             {
                 UserId = user.Id,
                 OrderDate = DateTime.UtcNow,
                 TotalAmount = cart.CartDetails.Sum(i => i.Price * i.Quantity),
                 OrderStatus = "Pending",
-                OrderDetails = cart.CartDetails.Select(i => new OrderDetail
+                UserName = user.UserName,
+                OrderDetails = cart.CartDetails.Select(i => new OrderDetailDto
                 {
                     ProductId = i.ProductId,
+                    ProductName = i.Name,
                     Quantity = i.Quantity,
                     Price = i.Price
                 }).ToList()
             };
 
-            await _orderRepo.AddOrder(newOrder);
+            await _orderServices.AddOrder(newOrder);
 
             // Initiate Stripe Payment
             var checkoutService = new OrderService();
@@ -89,9 +92,9 @@ namespace PresentationLayer.Controllers
                 var user = await _userManager.GetUserAsync(User);
 
                 // Update order status to "Paid"
-                var order = await _orderRepo.GetOrderById(user.Id);
+                var order = await _orderServices.GetOrderById(user.Id);
                 order.OrderStatus = "Paid";
-                await _orderRepo.UpdateOrder(order);
+                await _orderServices.UpdateOrder(order);
 
                 // Clear user's cart
                 await _cartServices.ClearCart(user.Id);
@@ -100,7 +103,6 @@ namespace PresentationLayer.Controllers
             return View();
         }
 
-        [Authorize]
         public async Task<IActionResult> OrderHistory()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -109,17 +111,17 @@ namespace PresentationLayer.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            var orders = await _orderRepo.GetOrdersByUserId(user.Id);
+            var orders = await _orderServices.GetOrdersByUserId(user.Id);
 
             var orderDtos = orders.Select(o => new OrderDto
             {
                 OrderId = o.OrderId,
                 OrderDate = o.OrderDate,
-                Status = o.OrderStatus,
+                OrderStatus = o.OrderStatus,
                 TotalAmount = o.TotalAmount,
                 OrderDetails = o.OrderDetails.Select(od => new OrderDetailDto
                 {
-                    ProductName = od.Product.Name,
+                    ProductName = od.ProductName,
                     Quantity = od.Quantity,
                     Price = od.Price
                 }).ToList()

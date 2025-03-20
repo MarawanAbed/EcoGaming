@@ -1,7 +1,4 @@
-﻿
-
-
-using AutoMapper;
+﻿using AutoMapper;
 using BusinessLogicLayer.DTOs;
 using BusinessLogicLayer.Services.Abstraction;
 using DataAccessLayer.Enitites;
@@ -82,23 +79,9 @@ namespace BusinessLogicLayer.Services.Implementation
             {
                 if (userCart == null)
                 {
-                    // If user has no existing cart, create a new one
-                    var newCart = new Cart
-                    {
-                        UserId = userId,
-                        CartDetails = guestCartDetails.Select(gc => new CartDetails
-                        {
-                            ProductId = gc.ProductId,
-                            Price = gc.Price,
-                            Name = gc.Name,
-                            Quantity = gc.Quantity,
-                            ImageUrl = gc.ImageUrl,
-                            Description = gc.Description,
-                            Stock = gc.Stock
-                        }).ToList()
-                    };
-
-                    await _cartRepo.AddCart(newCart);
+                    var newCart = _mapper.Map<Cart>
+                        (new CartDto { UserId = userId, CartDetails = guestCartDetails });
+                    await _cartRepo.AddCart(_mapper.Map<Cart>(newCart));
                 }
                 else
                 {
