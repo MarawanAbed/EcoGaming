@@ -144,6 +144,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\27bfa8d9-816d-48e0-9ebd-4e7dd55c22d3_5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/27bfa8d9-816d-48e0-9ebd-4e7dd55c22d3_5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>effnm4o5uu</Fingerprint>
+      <Integrity>2tPFc0hUsuY+PSl1PsH6x/lZz0bQeeLRbs+cfiIu+gY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\27bfa8d9-816d-48e0-9ebd-4e7dd55c22d3_5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png'))">
       <SourceType>Package</SourceType>
       <SourceId>PresentationLayer</SourceId>
@@ -324,6 +342,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\6427380b-bc0b-4bee-a8dd-24d911bee929_3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/6427380b-bc0b-4bee-a8dd-24d911bee929_3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lk2g8fgfxc</Fingerprint>
+      <Integrity>BdX/tRMoZfcEzsxoYCVXVWVEvCyBzP+b7+wPOUe0Y5Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\6427380b-bc0b-4bee-a8dd-24d911bee929_3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>PresentationLayer</SourceId>
@@ -342,6 +378,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\688883bd-31d4-4e11-a667-47698d5d8881_top25modernpcgames-blogroll-1663951042311.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/688883bd-31d4-4e11-a667-47698d5d8881_top25modernpcgames-blogroll-1663951042311.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>21vjdbz3dw</Fingerprint>
+      <Integrity>1kxXqhRiU9tqMb13dU60KWYRlSAMtnkFTfSM0j2vNQ0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\688883bd-31d4-4e11-a667-47698d5d8881_top25modernpcgames-blogroll-1663951042311.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>PresentationLayer</SourceId>
@@ -359,6 +413,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\7642afd4-1c66-41db-9def-bdbb92a074bf_god_of_war-339603008-large.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/7642afd4-1c66-41db-9def-bdbb92a074bf_god_of_war-339603008-large.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7h6m09zohw</Fingerprint>
+      <Integrity>tUE6ivBp8qv5y2uV1OVlGriAqXhRcQeOub7Ibj4jyHk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\7642afd4-1c66-41db-9def-bdbb92a074bf_god_of_war-339603008-large.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp'))">
       <SourceType>Package</SourceType>
@@ -431,6 +503,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\a8c665b9-cc1f-46e1-86e4-7fe76f5ee67d_4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/a8c665b9-cc1f-46e1-86e4-7fe76f5ee67d_4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ybb82y3hma</Fingerprint>
+      <Integrity>opo/sVB3HWODnDut+AQLRsQPN1F9C7jG80qhcp5eXWM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\a8c665b9-cc1f-46e1-86e4-7fe76f5ee67d_4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\af774365-b538-424a-a50a-b28c757df4d0_top25modernpcgames-blogroll-1663951042311.jpg'))">
       <SourceType>Package</SourceType>
@@ -539,6 +629,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\cb74b79b-46eb-4aff-9607-354a05efa3e7_download.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ce614350-10fb-4a3b-887e-faacf000c436_Congole.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>PresentationLayer</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PresentationLayer</BasePath>
+      <RelativePath>Images/ce614350-10fb-4a3b-887e-faacf000c436_Congole.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9gudoda8ht</Fingerprint>
+      <Integrity>lxgXitGGgzKJNEUAjMQG9SF3nNaJOIMLdlQtY9XQjUI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ce614350-10fb-4a3b-887e-faacf000c436_Congole.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Ecommerce.png'))">
       <SourceType>Package</SourceType>

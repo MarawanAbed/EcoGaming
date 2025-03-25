@@ -1,8 +1,8 @@
-﻿@{
+﻿@model List<GetAllProductsVm>
+
+@{
     ViewData["Title"] = "Manage Products";
 }
-
-@model List<GetAllProductsVm>
 
 <div class="container mt-4">
     <h2 class="text-light text-center mb-4">Manage Products</h2>
@@ -14,61 +14,111 @@
         </a>
     </div>
 
-    <table id="productsTable" class="table table-dark table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Image</th>
-                <th>Name</th>
-				<th>Description </th>
-                <th>Price</th>
-                <th>Stock</th>
-                <th>Added By</th>
-                <th>Category</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model != null && Model.Any())
-            {
-                foreach (var product in Model)
+    <div class="d-none d-lg-block table-responsive">
+        <table id="productsTable" class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Added By</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.ProductId</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(product.ImageUrl))
+                                {
+                                    <img src="~/Images/@product.ImageUrl" width="50" class="rounded">
+                                }
+                                else
+                                {
+                                    <span>No Image</span>
+                                }
+                            </td>
+                            <td>@product.Name</td>
+                            <td>@product.Description</td>
+                            <td>$@product.Price</td>
+                            <td>@product.Stock</td>
+                            <td>@product.AddedByRole</td>
+                            <td>@product.CategoryName</td>
+                            <td>
+                                <a asp-action="EditProduct" asp-route-id="@product.ProductId" class="btn btn-sm btn-warning">Edit</a>
+                                <form asp-action="DeleteProduct" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@product.ProductId" />
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
                 {
                     <tr>
-                        <td>@product.ProductId</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(product.ImageUrl))
-                            {
-                                <img src="~/Images/@product.ImageUrl" width="50" class="rounded">
-                            }
-                            else
-                            {
-                                <span>No Image</span>
-                            }
-                        </td>
-                        <td>@product.Name</td>
-						<td>@product.Description</td>
-                        <td>$@product.Price</td>
-                        <td>@product.Stock</td>
-                        <td>@product.AddedByRole</td>
-                        <td>@product.CategoryName</td>
-                        <td>
-                            <a asp-action="EditProduct" asp-route-id="@product.ProductId" class="btn btn-sm btn-warning">Edit</a>
-                            <form asp-action="DeleteProduct" method="post" style="display:inline;">
-                                <input type="hidden" name="id" value="@product.ProductId" />
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
+                        <td colspan="10" class="text-center text-light">No products found.</td>
                     </tr>
                 }
-            }
-            else
-            {
-                <tr>
-                    <td colspan="10" class="text-center text-light">No products found.</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-lg-none">
+        @if (Model != null && Model.Any())
+        {
+            <div class="row g-4">
+                @foreach (var product in Model)
+                {
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Product ID: @product.ProductId</h5>
+                                <p class="card-text">
+                                    <strong>Name:</strong> @product.Name<br>
+                                    <strong>Description:</strong> @product.Description<br>
+                                    <strong>Price:</strong> $@product.Price<br>
+                                    <strong>Stock:</strong> @product.Stock<br>
+                                    <strong>Added By:</strong> @product.AddedByRole<br>
+                                    <strong>Category:</strong> @product.CategoryName<br>
+                                    <strong>Image:</strong>
+                                    @if (!string.IsNullOrEmpty(product.ImageUrl))
+                                    {
+                                        <img src="~/Images/@product.ImageUrl" width="50" class="rounded">
+                                    }
+                                    else
+                                    {
+                                        <span>No Image</span>
+                                    }
+                                </p>
+                                <div>
+                                    <a asp-action="EditProduct" asp-route-id="@product.ProductId" class="btn btn-sm btn-warning">Edit</a>
+                                    <form asp-action="DeleteProduct" method="post" style="display:inline;">
+                                        <input type="hidden" name="id" value="@product.ProductId" />
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+                No products found.
+            </div>
+        }
+    </div>
 </div>
 
 <script>
@@ -76,4 +126,3 @@
         $('#productsTable').DataTable();
     });
 </script>
-

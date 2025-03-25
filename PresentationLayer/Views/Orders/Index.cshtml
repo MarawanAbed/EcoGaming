@@ -7,25 +7,25 @@
     <div class="row">
         <!-- Order Summary Cards -->
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 mb-3">
             <div class="card bg-success text-light text-center p-3">
                 <h5>Total Revenue</h5>
                 <h3 id="total-revenue">$@Model.TotalRevenue</h3>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 mb-3">
             <div class="card bg-primary text-light text-center p-3">
                 <h5>Completed Orders</h5>
                 <h3 id="completed-orders">@Model.CompletedOrders</h3>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 mb-3">
             <div class="card bg-warning text-dark text-center p-3">
                 <h5>Pending Orders</h5>
                 <h3 id="pending-orders">@Model.PendingOrders</h3>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 mb-3">
             <div class="card bg-danger text-light text-center p-3">
                 <h5>Canceled Orders</h5>
                 <h3 id="canceled-orders">@Model.CanceledOrders</h3>
@@ -33,70 +33,112 @@
         </div>
     </div>
 
-    <!-- Recent Orders Table -->
-    <div class="card bg-dark text-light mt-4 p-3 border border-secondary">
+    <!-- Recent Orders Table for Larger Screens -->
+    <div class="d-none d-lg-block card bg-dark text-light mt-4 p-3 border border-secondary">
         <div class="card-body">
             <h4>Recent Orders</h4>
-            <table class="table table-dark table-bordered">
-                <thead>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>User</th>
-                        <th>Date</th>
-                        <th>Total</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var order in Model.RecentOrders)
-                    {
-                        <tr id="order-@order.OrderId">
-                            <td>@order.OrderId</td>
-                            <td>@order.UserName</td>
-                            <td>@order.OrderDate.ToString("yyyy-MM-dd HH:mm")</td>
-                            <td>$@order.TotalAmount</td>
-                            <td>
-                                <span id="status-@order.OrderId" class="badge bg-@(order.OrderStatus == "Completed" ? "success" : (order.OrderStatus == "Pending" ? "warning" : "danger"))">
-                                    @order.OrderStatus
-                                </span>
-                                <button class="btn btn-sm btn-primary" onclick="updateStatus('@order.OrderId', 'Completed')">Mark as Completed</button>
-                                <button class="btn btn-sm btn-danger" onclick="updateStatus('@order.OrderId', 'Canceled')">Mark as Canceled</button>
-                                <button class="btn btn-sm btn-warning" onclick="updateStatus('@order.OrderId', 'Pending')">Mark as Pending</button>
-                            </td>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>User</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var order in Model.RecentOrders)
+                        {
+                            <tr id="order-@order.OrderId">
+                                <td>@order.OrderId</td>
+                                <td>@order.UserName</td>
+                                <td>@order.OrderDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>$@order.TotalAmount</td>
+                                <td>
+                                    <span id="status-@order.OrderId" class="badge bg-@(order.OrderStatus == "Completed" ? "success" : (order.OrderStatus == "Pending" ? "warning" : "danger"))">
+                                        @order.OrderStatus
+                                    </span>
+                                    <button class="btn btn-sm btn-primary" onclick="updateStatus('@order.OrderId', 'Completed')">Mark as Completed</button>
+                                    <button class="btn btn-sm btn-danger" onclick="updateStatus('@order.OrderId', 'Canceled')">Mark as Canceled</button>
+                                    <button class="btn btn-sm btn-warning" onclick="updateStatus('@order.OrderId', 'Pending')">Mark as Pending</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <script>
-        function updateStatus(orderId, newStatus) {
-            fetch('/Orders/UpdateStatus', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ orderId: orderId, status: newStatus })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const statusElement = document.getElementById(`status-${orderId}`);
-                    statusElement.textContent = newStatus;
-                    statusElement.className = `badge bg-${newStatus === 'Completed' ? 'success' : (newStatus === 'Pending' ? 'warning' : 'danger')}`;
 
-                    // Update total counts
-                    document.getElementById('completed-orders').textContent = data.completedOrders;
-                    document.getElementById('pending-orders').textContent = data.pendingOrders;
-                    document.getElementById('canceled-orders').textContent = data.canceledOrders;
-                } else {
-                    alert('Failed to update status');
+    <!-- Recent Orders Cards for Smaller Screens -->
+    <div class="d-lg-none">
+        @if (Model.RecentOrders != null && Model.RecentOrders.Any())
+        {
+            <div class="row g-4">
+                @foreach (var order in Model.RecentOrders)
+                {
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Order ID: @order.OrderId</h5>
+                                <p class="card-text">
+                                    <strong>User:</strong> @order.UserName<br>
+                                    <strong>Date:</strong> @order.OrderDate.ToString("yyyy-MM-dd HH:mm")<br>
+                                    <strong>Total:</strong> $@order.TotalAmount<br>
+                                    <strong>Status:</strong>
+                                    <span id="status-@order.OrderId" class="badge bg-@(order.OrderStatus == "Completed" ? "success" : (order.OrderStatus == "Pending" ? "warning" : "danger"))">
+                                        @order.OrderStatus
+                                    </span>
+                                </p>
+                                <div>
+                                    <button class="btn btn-sm btn-primary" onclick="updateStatus('@order.OrderId', 'Completed')">Mark as Completed</button>
+                                    <button class="btn btn-sm btn-danger" onclick="updateStatus('@order.OrderId', 'Canceled')">Mark as Canceled</button>
+                                    <button class="btn btn-sm btn-warning" onclick="updateStatus('@order.OrderId', 'Pending')">Mark as Pending</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 }
-            })
-            .catch(error => {
-                console.error('Error updating status:', error);
-                alert('An error occurred while updating status.');
-            });
+            </div>
         }
-    </script>
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+                No recent orders found.
+            </div>
+        }
+    </div>
 </div>
+
+<script>
+    function updateStatus(orderId, newStatus) {
+        fetch('/Orders/UpdateStatus', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ orderId: orderId, status: newStatus })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const statusElement = document.getElementById(`status-${orderId}`);
+                statusElement.textContent = newStatus;
+                statusElement.className = `badge bg-${newStatus === 'Completed' ? 'success' : (newStatus === 'Pending' ? 'warning' : 'danger')}`;
+
+                // Update total counts
+                document.getElementById('completed-orders').textContent = data.completedOrders;
+                document.getElementById('pending-orders').textContent = data.pendingOrders;
+                document.getElementById('canceled-orders').textContent = data.canceledOrders;
+            } else {
+                alert('Failed to update status');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating status:', error);
+            alert('An error occurred while updating status.');
+        });
+    }
+</script>

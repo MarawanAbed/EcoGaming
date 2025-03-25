@@ -13,44 +13,75 @@
                 <div class="card-body">
                     @if (Model.Any())
                     {
-                        <table class="table table-dark table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Username</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Roles</th>
-                                    <th scope="col">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @for (int i = 0; i < Model.Count; i++)
-                                {
+                        <div class="d-none d-lg-block table-responsive">
+                            <table class="table table-dark table-striped">
+                                <thead>
                                     <tr>
-                                        <th scope="row">@(i + 1)</th>
-                                        <td>@Model[i].UserName</td>
-                                        <td>@Model[i].Email</td>
-                                        <td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Roles</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int i = 0; i < Model.Count; i++)
+                                    {
+                                        <tr>
+                                            <th scope="row">@(i + 1)</th>
+                                            <td>@Model[i].UserName</td>
+                                            <td>@Model[i].Email</td>
+                                            <td>
+                                                @foreach (var role in Model[i].Roles)
+                                                {
+                                                    <span class="badge bg-secondary">@role</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <form asp-action="Edit" method="get" style="display:inline;">
+                                                    <input type="hidden" name="id" value="@Model[i].UserId" />
+                                                    <button type="submit" class="btn btn-warning">Edit</button>
+                                                </form>
+                                                <form asp-action="Delete" method="post" style="display:inline;">
+                                                    <input type="hidden" name="id" value="@Model[i].UserId" />
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="d-lg-none">
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">User #@(i + 1)</h5>
+                                        <p class="card-text"><strong>Username:</strong> @Model[i].UserName</p>
+                                        <p class="card-text"><strong>Email:</strong> @Model[i].Email</p>
+                                        <p class="card-text">
+                                            <strong>Roles:</strong>
                                             @foreach (var role in Model[i].Roles)
                                             {
                                                 <span class="badge bg-secondary">@role</span>
                                             }
-                                        </td>
-                                        <td>
+                                        </p>
+                                        <div>
                                             <form asp-action="Edit" method="get" style="display:inline;">
-                                                <input type="hidden" name="id" value="@Model[i].UserId"/>
+                                                <input type="hidden" name="id" value="@Model[i].UserId" />
                                                 <button type="submit" class="btn btn-warning">Edit</button>
-                                            </form> 
+                                            </form>
                                             <form asp-action="Delete" method="post" style="display:inline;">
                                                 <input type="hidden" name="id" value="@Model[i].UserId" />
                                                 <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    }   
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
                     else
                     {
                         <div class="alert alert-warning" role="alert">

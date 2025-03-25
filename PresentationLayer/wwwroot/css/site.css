@@ -46,6 +46,7 @@ footer {
         footer a:hover {
             color: #00ff00; /* Green color on hover */
         }
+
 .hero-section {
     position: relative;
     width: 100%;
@@ -67,6 +68,7 @@ footer {
     text-align: center;
     color: white;
 }
+
 html {
     position: relative;
     min-height: 100%;
@@ -244,6 +246,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 15px; /* Add padding for smaller screens */
 }
 
 .auth-card {
@@ -966,3 +969,12 @@ input, select, textarea {
             background-color: #17c7a0;
             color: #111;
         }
+
+@media (max-width: 768px) {
+    .dropdown-menu-end[data-bs-popper] {
+        left: auto;
+        right: auto; /* Ensure the dropdown is positioned correctly */
+        max-width: 90vw; /* Ensure dropdown doesn't exceed viewport width */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+}

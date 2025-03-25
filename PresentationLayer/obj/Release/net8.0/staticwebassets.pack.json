@@ -1,0 +1,417 @@
+{
+  "Files": [
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\PresentationLayer.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PresentationLayer.k26lvnchex.bundle.scp.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\0e36030f-d79b-46d1-a425-c8b9adbb0e14_WhatsApp Image 2025-03-13 at 03.26.20_39fe21c1.jpg",
+      "PackagePath": "staticwebassets\\Images\\0e36030f-d79b-46d1-a425-c8b9adbb0e14_WhatsApp Image 2025-03-13 at 03.26.20_39fe21c1.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\1166a930-9b44-4c7d-802b-58835784590a_gamingconsoles-2048px-00730-3x2-1.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\11a3c3a5-5011-4923-b2b7-ae6a3524a37f_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1deffea3-8ee9-4927-813e-3b23f4b14a2e_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\1deffea3-8ee9-4927-813e-3b23f4b14a2e_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png",
+      "PackagePath": "staticwebassets\\Images\\1e43da6d-56d2-46a9-bb7e-701258bf7208_Screenshot 2025-03-13 031820.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp",
+      "PackagePath": "staticwebassets\\Images\\1fb6c31d-5cf3-42bf-8e60-eb95d0f887d2_hero.webp"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\27bfa8d9-816d-48e0-9ebd-4e7dd55c22d3_5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg",
+      "PackagePath": "staticwebassets\\Images\\27bfa8d9-816d-48e0-9ebd-4e7dd55c22d3_5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png",
+      "PackagePath": "staticwebassets\\Images\\2f2f62b5-a881-4219-a331-de2736ad1f78_Ecommerce.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg",
+      "PackagePath": "staticwebassets\\Images\\3429d9c6-9741-4c1a-8a87-52885a5d3928_images (1).jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg",
+      "PackagePath": "staticwebassets\\Images\\3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png",
+      "PackagePath": "staticwebassets\\Images\\42a9be6f-2f90-462f-92c9-3869ebf7ff2e_strcuture directive.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg",
+      "PackagePath": "staticwebassets\\Images\\47242455-ed29-497d-9d55-1c86b2028d5e_s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\4af43122-3a8f-4345-8e06-0b438bca3da6_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\59672091-96f3-4897-b9b5-57eee09e4958_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\59672091-96f3-4897-b9b5-57eee09e4958_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg",
+      "PackagePath": "staticwebassets\\Images\\5beac3be-deb7-4ea2-aae2-0469ce53745a_images.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\62eccc01-4809-4b0d-a744-2e2fe01e0666_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\6427380b-bc0b-4bee-a8dd-24d911bee929_3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg",
+      "PackagePath": "staticwebassets\\Images\\6427380b-bc0b-4bee-a8dd-24d911bee929_3ac2914b-a461-417c-bff2-a85dbae9fd92_81htlTqEckL.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\68709ece-bb43-4ced-8dba-34cd2a7be3b6_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\688883bd-31d4-4e11-a667-47698d5d8881_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\688883bd-31d4-4e11-a667-47698d5d8881_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\6f59aeac-1634-474b-84ba-a6080cf1db16_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7642afd4-1c66-41db-9def-bdbb92a074bf_god_of_war-339603008-large.jpg",
+      "PackagePath": "staticwebassets\\Images\\7642afd4-1c66-41db-9def-bdbb92a074bf_god_of_war-339603008-large.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "PackagePath": "staticwebassets\\Images\\77c50d5c-e4b3-4a22-b759-a859abbf7d26_god-of-war-hub-thumbnail-2018-en-29jul21.webp"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\7a1a4bac-fcac-466e-9e79-d960f1820136_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png",
+      "PackagePath": "staticwebassets\\Images\\7ad456b9-69c9-41ac-82b2-ab992509c99d_Screenshot 2025-03-13 031820.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\Ecommerce.png",
+      "PackagePath": "staticwebassets\\Images\\Ecommerce.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\a72234d7-ddbb-44de-b58b-81493fc47dc4_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\a8c665b9-cc1f-46e1-86e4-7fe76f5ee67d_4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\a8c665b9-cc1f-46e1-86e4-7fe76f5ee67d_4fd9bb8e-aceb-4803-a015-9667b5e0ac6c_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\af774365-b538-424a-a50a-b28c757df4d0_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\af774365-b538-424a-a50a-b28c757df4d0_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\afbca9a1-fd26-4a30-8824-2022b1675a5b_fb_image_6285e2bfce3b9.png",
+      "PackagePath": "staticwebassets\\Images\\afbca9a1-fd26-4a30-8824-2022b1675a5b_fb_image_6285e2bfce3b9.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\b0fc819f-18b6-4ed8-8573-19ca6044866a_screencapture-game-rush-ui-myshopify-2025-03-18-03_35_17.png",
+      "PackagePath": "staticwebassets\\Images\\b0fc819f-18b6-4ed8-8573-19ca6044866a_screencapture-game-rush-ui-myshopify-2025-03-18-03_35_17.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\bca53c77-66c5-4c4c-b447-0dbc3803a26b_top25modernpcgames-blogroll-1663951042311.jpg",
+      "PackagePath": "staticwebassets\\Images\\bca53c77-66c5-4c4c-b447-0dbc3803a26b_top25modernpcgames-blogroll-1663951042311.jpg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\c681d846-9111-4770-a286-9fd93fa78428_god-of-war-hub-thumbnail-2018-en-29jul21.webp",
+      "PackagePath": "staticwebassets\\Images\\c681d846-9111-4770-a286-9fd93fa78428_god-of-war-hub-thumbnail-2018-en-29jul21.webp"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\cb74b79b-46eb-4aff-9607-354a05efa3e7_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\cb74b79b-46eb-4aff-9607-354a05efa3e7_download.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\ce614350-10fb-4a3b-887e-faacf000c436_Congole.png",
+      "PackagePath": "staticwebassets\\Images\\ce614350-10fb-4a3b-887e-faacf000c436_Congole.png"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\game.jpeg",
+      "PackagePath": "staticwebassets\\Images\\game.jpeg"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\Images\\hero.webp",
+      "PackagePath": "staticwebassets\\Images\\hero.webp"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "A:\\EcoGaming\\PresentationLayer\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.PresentationLayer.props",
+      "PackagePath": "build\\PresentationLayer.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PresentationLayer.props",
+      "PackagePath": "buildMultiTargeting\\PresentationLayer.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.PresentationLayer.props",
+      "PackagePath": "buildTransitive\\PresentationLayer.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

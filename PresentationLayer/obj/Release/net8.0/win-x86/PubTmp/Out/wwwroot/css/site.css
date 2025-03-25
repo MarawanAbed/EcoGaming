@@ -1,0 +1,968 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 2rem 0; /* Padding for top and bottom */
+}
+
+    footer .container {
+        max-width: 1200px; /* Maximum width for the container */
+        margin: 0 auto; /* Center the container */
+    }
+
+    footer .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer .text-sm {
+        font-size: 0.875rem; /* Small text size */
+    }
+
+    footer .space-x-4 > * + * {
+        margin-left: 1rem; /* Space between links */
+    }
+
+    footer a {
+        color: #ffffff; /* White text color for links */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+        footer a:hover {
+            color: #00ff00; /* Green color on hover */
+        }
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+    .hero-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Cancel and Add Product Buttons */
+.btn-cancel, .btn-add-product {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+}
+
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.btn-cancel:hover {
+    background-color: #00ffcc;
+    color: #121212;
+}
+/* Close Icon Styling */
+.close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+    .close-icon:hover {
+        background-color: #e60000;
+    }
+
+/* Preview Image Styling */
+.image-preview-container img {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .image-preview-container img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.5);
+    }
+
+/* Current Image Section */
+.current-image-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    border: 2px solid #00ffcc;
+}
+
+    .current-image-section .image-wrapper img {
+        max-width: 250px;
+        border: 2px solid #00ffcc;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+}
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+    }
+
+.btn-cancel, .btn-add-product {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+}
+
+    .btn-cancel:hover {
+        background-color: #00ffcc;
+        color: #121212;
+    }
+
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+}
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+    }
+
+/* Image Preview */
+#imagePreview {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Input Group Styling */
+.input-group-addon {
+    background-color: #00ffcc;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #00ffcc;
+    color: #fff;
+}
+
+    .form-control:focus {
+        border-color: #00ffcc;
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+    }
+
+/* Image Preview */
+#imagePreview {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Custom styles for gaming theme */
+.navbar {
+    background-color: #121212 !important;
+    border-bottom: 3px solid #00ffcc;
+}
+
+body {
+    background-color: #121212 !important; /* Dark background */
+    color: #ffffff !important; /* Light text color */
+}
+
+
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-card {
+    background-color: #222;
+    border: 1px solid #00ffcc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group-addon {
+    background: #00ffcc;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+    border: 1px solid #00ffcc;
+    background: #333;
+    color: #fff;
+}
+
+.auth-btn {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+    .auth-btn:hover {
+        background-color: #009999;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.card {
+    background-color: #222 !important; /* Darker cards */
+    color: white !important;
+    border: 1px solid #00ffcc;
+}
+
+.navbar-brand {
+    color: #00ffcc !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #00ffcc !important;
+    }
+
+.search-bar {
+    width: 300px;
+}
+
+.btn-search {
+    background-color: #00ffcc;
+    color: #121212;
+}
+/* Add Product Button */
+.btn-add-product {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    border: 2px solid #00ffcc;
+    padding: 8px 20px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+    .btn-add-product i {
+        margin-right: 5px;
+    }
+
+    .btn-add-product:hover {
+        background-color: #009999;
+        color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.login-register-links {
+    display: none;
+    position: absolute;
+    background-color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nav-item:hover .login-register-links {
+    display: block;
+}
+
+.btn-search:hover {
+    background-color: #009999;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.3);
+    }
+
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Ensures consistent size */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-btn {
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    transition: all 0.3s ease-in-out;
+}
+
+    .product-btn:hover {
+        background-color: #00ffcc;
+        color: #121212;
+    }
+
+.card-body {
+    padding-top: 20px; /* Adds more space above the content */
+    padding-bottom: 20px; /* Adds space below */
+}
+
+.card-title {
+    margin-bottom: 15px; /* Adds spacing below the title */
+}
+/* ==== Login & Register Buttons Styling ==== */
+.login-btn, .register-btn {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn {
+    color: #00ffcc !important;
+    border: 2px solid #00ffcc;
+}
+
+    .login-btn:hover {
+        background-color: #00ffcc;
+        color: #121212 !important;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.register-btn {
+    background-color: #00ffcc;
+    color: #121212 !important;
+    border: 2px solid #00ffcc;
+}
+
+    .register-btn:hover {
+        background-color: transparent;
+        color: #00ffcc !important;
+        box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+.divider {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #00ffcc, transparent);
+    margin: 50px 0;
+    border-radius: 2px;
+}
+/* ==== RenderBody Section Styling ==== */
+.main-content {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Gradient for depth */
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 20px rgba(0, 255, 204, 0.2); /* Glowing effect */
+    min-height: 80vh; /* Ensure enough height */
+}
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: #222; /* Dark dropdown background */
+    border: 1px solid #00ffcc; /* Neon border */
+}
+
+.dropdown-item {
+    color: #fff !important;
+    transition: background 0.3s ease-in-out;
+}
+
+    .dropdown-item:hover {
+        background-color: #00ffcc !important;
+        color: #121212 !important;
+    }
+
+.form-check-input {
+    background-color: #333;
+    border: 1px solid #00ffcc;
+}
+
+    .form-check-input:checked {
+        background-color: #00ffcc;
+        border-color: #00ffcc;
+    }
+
+.form-check-label {
+    color: #ffffff;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+/* Close Icon for Removing New Image */
+.close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+    .close-icon:hover {
+        background-color: #e60000;
+    }
+
+/* Current and New Image Styling */
+.img-thumbnail {
+    border: 2px solid #00ffcc;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .img-thumbnail:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.5);
+    }
+
+/* Image Preview Container */
+.image-preview-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+/* General Enhancements */
+.form-control, .btn {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style the Current Image Preview */
+.current-img-preview {
+    max-width: 250px;
+    border: 3px solid #00ffcc;
+    padding: 5px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .current-img-preview:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.5);
+    }
+
+/* Style the New Image Preview */
+.new-img-preview {
+    max-width: 250px;
+    border: 3px solid #ffcc00;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/* Close Icon for Removing New Image */
+.close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+    .close-icon:hover {
+        background-color: #e60000;
+    }
+
+/* Custom File Upload Input */
+.custom-file-upload {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #00ffcc;
+    padding: 8px;
+}
+
+    .custom-file-upload:hover {
+        background-color: #333;
+        border-color: #00cc99;
+    }
+
+/* Image Preview Container */
+.image-preview-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* Button Styling */
+.btn-danger {
+    background-color: #ff4d4d;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: #e60000;
+    }
+/* Preview Image Styling */
+.image-preview-container img {
+    border: 2px solid #17c7a0;
+    padding: 5px;
+}
+
+/* Close Icon Styling */
+.close-icon {
+    font-size: 1.5rem;
+    background: #111;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Button Hover Effects */
+.btn-success, .btn-outline-info {
+    transition: 0.3s ease;
+}
+
+    .btn-success:hover, .btn-outline-info:hover {
+        background-color: #17c7a0;
+        color: #000;
+        border-color: #17c7a0;
+    }
+
+/* File Input Styling */
+.input-group .form-control {
+    border-left: none;
+}
+
+.input-group .input-group-text {
+    border-right: none;
+}
+
+/* Form Card Styling */
+.card {
+    border: 1px solid #17c7a0;
+    box-shadow: 0 4px 12px rgba(23, 199, 160, 0.5);
+}
+/* Custom Close Icon Styling */
+.custom-close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #111;
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d;
+    border-radius: 50%;
+    padding: 5px 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+    /* Hover effect for close icon */
+    .custom-close-icon:hover {
+        background-color: #ff4d4d;
+        color: #111;
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+    }
+
+/* Image Preview Border */
+#imagePreview {
+    border: 2px solid #17c7a0;
+    padding: 4px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+    /* Hover effect for image preview */
+    #imagePreview:hover {
+        box-shadow: 0 0 15px rgba(23, 199, 160, 0.6);
+    }
+
+/* Form Container */
+.form-container {
+    padding: 30px;
+    background-color: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(23, 199, 160, 0.6);
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 2px solid #17c7a0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+    .input-group:focus-within {
+        box-shadow: 0 0 10px #17c7a0;
+    }
+
+/* Icons */
+.input-icon {
+    color: #17c7a0;
+    margin-right: 10px;
+}
+
+/* Input, Select, and Textarea Styling */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+}
+
+    /* Placeholder Color */
+    input::placeholder, textarea::placeholder {
+        color: #888;
+    }
+
+/* Image Preview */
+.image-preview {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#imagePreview {
+    max-width: 250px;
+    border: 2px solid #17c7a0;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+    #imagePreview:hover {
+        box-shadow: 0 0 15px rgba(23, 199, 160, 0.6);
+    }
+
+/* Close Icon Styling */
+.custom-close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #111;
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d;
+    border-radius: 50%;
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+    .custom-close-icon:hover {
+        background-color: #ff4d4d;
+        color: #111;
+        transform: scale(1.1);
+    }
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.btn-back, .btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-back {
+    background-color: transparent;
+    color: #17c7a0;
+    border: 2px solid #17c7a0;
+}
+
+    .btn-back:hover {
+        background-color: #17c7a0;
+        color: #111;
+    }
+
+.btn-submit {
+    background-color: #17c7a0;
+    color: #111;
+}
+
+    .btn-submit:hover {
+        background-color: #13a58a;
+        transform: scale(1.05);
+    }
+
+/* Form Container */
+.form-container {
+    padding: 30px;
+    background-color: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(23, 199, 160, 0.6);
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 2px solid #17c7a0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+    .input-group:focus-within {
+        box-shadow: 0 0 15px #17c7a0;
+    }
+
+/* Icons */
+.input-icon {
+    color: #17c7a0;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Input, Select, Textarea */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+    input::placeholder, textarea::placeholder {
+        color: #888;
+    }
+
+/* File Upload */
+.file-upload input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #17c7a0;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #111;
+    color: #17c7a0;
+    transition: 0.3s ease;
+}
+
+    .file-upload input[type="file"]:hover {
+        background-color: #17c7a0;
+        color: #111;
+    }
+
+/* Image Preview */
+.image-preview {
+    position: relative;
+    margin-top: 15px;
+}
+
+#imagePreview {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #17c7a0;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+    #imagePreview:hover {
+        box-shadow: 0 0 20px rgba(23, 199, 160, 0.6);
+    }
+
+/* Close Icon */
+.custom-close-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #111;
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+    .custom-close-icon:hover {
+        background-color: #ff4d4d;
+        color: #111;
+    }
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-back, .btn-submit {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-back {
+    background-color: transparent;
+    color: #17c7a0;
+    border: 2px solid #17c7a0;
+}
+
+    .btn-back:hover {
+        background-color: #17c7a0;
+        color: #111;
+    }
+
+.btn-submit {
+    background-color: #17c7a0;
+    color: #111;
+}
+
+    .btn-submit:hover {
+        background-color: #13a58a;
+        transform: scale(1.05);
+    }
+
+/* Custom Select Dropdown */
+.input-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid #17c7a0;
+    padding: 14px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+    /* Dropdown Arrow Icon */
+    .input-group select::after {
+        content: '\25BC'; /* Unicode character for down arrow */
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #17c7a0;
+        pointer-events: none;
+    }
+
+    /* Focus and Hover Effects */
+    .input-group select:focus,
+    .input-group select:hover {
+        border-color: #13a58a;
+        box-shadow: 0 0 15px #17c7a0;
+    }
+
+    /* Dropdown Options */
+    .input-group select option {
+        background-color: #111;
+        color: #fff;
+        padding: 12px;
+    }
+
+        /* Option Hover (for better UX on some browsers) */
+        .input-group select option:hover {
+            background-color: #17c7a0;
+            color: #111;
+        }

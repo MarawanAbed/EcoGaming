@@ -1,47 +1,49 @@
 ﻿@model List<GetAllCategoriesVm>
-<div class="container mt-4"> 
-    <h2 class="text-light text-center mb-4">Manage Categories</h2> 
+<div class="container mt-4">
+    <h2 class="text-light text-center mb-4">Manage Categories</h2>
 
-     <div class="mb-3 text-end">
+    <div class="mb-3 text-end">
         <a asp-action="AddCategory" class="btn btn-add-product">
-            <i class="fa fa-plus"></i> Add Category 
-         </a> 
-     </div> 
+            <i class="fa fa-plus"></i> Add Category
+        </a>
+    </div>
 
-     <table class="table table-dark table-striped"> 
-         <thead> 
-             <tr> 
-                 <th>ID</th>
-                 <th>Image</th>
-                 <th>Name</th> 
-                 <th>Actions</th> 
-             </tr>
-         </thead> 
-         <tbody> 
-             @foreach (var category in Model) 
-             { 
-                 <tr> 
-                     <td>@category.CategoryId</td>
-                    <td>
-                        @if (!string.IsNullOrEmpty(category.ImageUrl))
-                        {
-                            <img src="~/Images/@category.ImageUrl" width="100" class="rounded">
-                        }
-                        else
-                        {
-                            <span>No Image</span>
-                        }
-                    </td>
-                     <td>@category.Name</td> 
-                     <td> 
-                         <a asp-action="EditCategory" asp-route-id="@category.CategoryId" class="btn btn-warning">Edit</a>
-                        <form asp-action="DeleteCategory" method="post" style="display:inline;">
-                            <input type="hidden" name="id" value="@category.CategoryId" />
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                     </td> 
-                 </tr> 
-             } 
-         </tbody> 
-     </table> 
- </div>
+    <div class="table-responsive">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model)
+                {
+                    <tr>
+                        <td>@category.CategoryId</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(category.ImageUrl))
+                            {
+                                <img src="~/Images/@category.ImageUrl" width="100" class="rounded">
+                            }
+                            else
+                            {
+                                <span>No Image</span>
+                            }
+                        </td>
+                        <td>@category.Name</td>
+                        <td>
+                            <a asp-action="EditCategory" asp-route-id="@category.CategoryId" class="btn btn-warning">Edit</a>
+                            <form asp-action="DeleteCategory" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@category.CategoryId" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
